@@ -1,0 +1,5 @@
+windows:
+  installs: scoop install dive
+
+linux|darwin:
+  installs: brew install dive

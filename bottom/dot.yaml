@@ -1,0 +1,5 @@
+windows:
+  installs: scoop install bottom
+
+linux|darwin:
+  installs: brew install bottom

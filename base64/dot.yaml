@@ -1,0 +1,5 @@
+windows:
+  installs: scoop install base64
+
+linux|darwin:
+  installs: brew install base64

@@ -1,0 +1,5 @@
+windows:
+  installs: scoop install go
+
+linux|darwin:
+  installs: brew install go
