@@ -7,5 +7,5 @@ windows:
 linux|darwin:
   installs: brew install nushell
   links:
-    config.nu: ~/.config/nu/config.nu
-    env.nu: ~/.config/nu/env.nu
+    config.nu: ~/Library/Application Support/nushell/config.nu
+    env.nu: ~/Library/Application Support/nushell/env.nu
