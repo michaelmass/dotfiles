@@ -1,0 +1,5 @@
+windows:
+  installs: scoop install nu
+
+linux|darwin:
+  installs: brew install nushell

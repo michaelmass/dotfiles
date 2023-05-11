@@ -1,0 +1,5 @@
+windows:
+  installs: scoop install tilt
+
+linux|darwin:
+  installs: brew install tilt
