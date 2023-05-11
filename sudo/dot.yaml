@@ -1,0 +1,5 @@
+windows:
+  installs: scoop install sudo
+
+linux|darwin:
+  installs: false

@@ -1,0 +1,5 @@
+windows:
+  installs: scoop install less
+
+linux|darwin:
+  installs: false

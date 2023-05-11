@@ -1,0 +1,5 @@
+windows:
+  installs: scoop install gh
+
+linux|darwin:
+  installs: brew install gh
