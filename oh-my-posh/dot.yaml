@@ -1,5 +1,11 @@
 windows:
-  installs: scoop install https://github.com/JanDeDobbeleer/oh-my-posh/releases/latest/download/oh-my-posh.json
+  installs: |
+    scoop install https://github.com/JanDeDobbeleer/oh-my-posh/releases/latest/download/oh-my-posh.json
+    sudo oh-my-posh font install
+    oh-my-posh init nu
 
 linux|darwin:
-  installs: brew install jandedobbeleer/oh-my-posh/oh-my-posh
+  installs: |
+    brew install jandedobbeleer/oh-my-posh/oh-my-posh
+    oh-my-posh font install
+    oh-my-posh init nu
