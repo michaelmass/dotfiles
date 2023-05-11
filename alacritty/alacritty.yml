@@ -1,0 +1,6 @@
+shell:
+  program: nu.exe
+
+font:
+  normal:
+    family: FiraCode Nerd Font Mono
