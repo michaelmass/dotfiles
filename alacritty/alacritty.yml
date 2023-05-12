@@ -1,5 +1,5 @@
 shell:
-  program: nu.exe
+  program: nu
 
 font:
   normal:
