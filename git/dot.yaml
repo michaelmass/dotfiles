@@ -1,5 +1,9 @@
 windows:
   installs: scoop install git
+  links:
+    .gitconfig: ~/.gitconfig
 
 linux|darwin:
   installs: brew install git
+  links:
+    .gitconfig: ~/.gitconfig
