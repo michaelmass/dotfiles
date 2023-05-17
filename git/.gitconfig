@@ -1,0 +1,19 @@
+[user]
+	name = michaelmass
+	email = 10071388+michaelmass@users.noreply.github.com
+[core]
+	editor = code --wait
+	autocrlf = input
+	eol = lf
+[push]
+	autoSetupRemote = true
+[branch "master"]
+	pushRemote = no_push
+[branch "main"]
+	pushRemote = no_push
+[credential]
+	helper = store
+[diff]
+  tool = default-difftool
+[difftool "default-difftool"]
+  cmd = code --wait --diff $LOCAL $REMOTE
