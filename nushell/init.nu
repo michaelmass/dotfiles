@@ -12,7 +12,7 @@ def gfu [
 
   echo $commit.stdout
 
-  if $commit.stderr != "" {
+  if $commit and $commit.stderr != "" {
     error make {
       msg: $commit.stderr
     }
