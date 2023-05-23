@@ -11,7 +11,7 @@ def gfu [
 
   echo $commit.stdout
 
-  if $commit.stderr? != "" {
+  if $commit.stderr? != "" and $commit.stderr? != null {
     error make {
       msg: $commit.stderr
     }
