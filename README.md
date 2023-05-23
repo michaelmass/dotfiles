@@ -1,4 +1,5 @@
 # Dotfiles
+
 > All the required files to setup a new desktop
 
 ## Requirements
@@ -12,11 +13,14 @@
 2. Then, install rust which will give access to cargo:
 
 Linux / MacOS
+
 ```
+brew tap homebrew/cask-fonts
 brew install rust
 ```
 
 Windows
+
 ```
 scoop install rust
 ```

@@ -6,6 +6,6 @@ windows:
 
 linux|darwin:
   installs: |
-    brew install nvm
-    nvm install 18.12.1
-    nvm use 18.12.1
+    # brew install nvm
+    # nvm install 18.12.1
+    # nvm use 18.12.1

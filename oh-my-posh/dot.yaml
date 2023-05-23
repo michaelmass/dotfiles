@@ -7,5 +7,4 @@ windows:
 linux|darwin:
   installs: |
     brew install jandedobbeleer/oh-my-posh/oh-my-posh
-    oh-my-posh font install
-    oh-my-posh init nu
+    oh-my-posh init nu --config ~/omp.config.json
