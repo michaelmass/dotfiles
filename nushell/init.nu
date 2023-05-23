@@ -8,11 +8,10 @@ def gfu [
   git add --all
 
   let $commit = (git commit -m $msg | complete)
-  echo $commit
 
   echo $commit.stdout
 
-  if $commit and $commit.stderr != "" {
+  if $commit.stderr? != "" {
     error make {
       msg: $commit.stderr
     }
