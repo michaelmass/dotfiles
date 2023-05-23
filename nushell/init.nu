@@ -8,6 +8,8 @@ def gfu [
   git add --all
 
   let $commit = (git commit -m $msg | complete)
+  echo $commit
+
   echo $commit.stdout
 
   if $commit.stderr != "" {
