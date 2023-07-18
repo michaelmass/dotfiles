@@ -44,11 +44,12 @@ alias yw = yarn watch
 alias ys = yarn start
 alias yt = yarn test
 
-alias gco = git commit -am 
+alias gco = git commit -am
+alias gaa = git add --all
 alias gf = git fetch
 alias gp = git pull
 alias gc = git checkout
-alias gcb = git checkout -b 
+alias gcb = git checkout -b
 alias gcm = git checkout master
 alias gcl = git clone
 alias gs = git stash
@@ -60,7 +61,7 @@ alias ghv = gh repo view --web
 alias ghprv = gh pr view --web
 
 alias db = docker build .
-alias dr = docker run 
+alias dr = docker run
 
 alias c = clear
 

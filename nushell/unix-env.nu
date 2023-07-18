@@ -86,6 +86,9 @@ let-env NU_PLUGIN_DIRS = [
 # let-env PATH = ($env.PATH | split row (char esep) | prepend '/some/path')
 let-env PATH = ($env.PATH | append "/opt/homebrew/bin")
 let-env PATH = ($env.PATH | append "/opt/homebrew/sbin")
+let-env PATH = ($env.PATH | append "/opt/homebrew/opt/openjdk/bin")
+let-env PATH = ($env.PATH | append "~/.nvm/versions/node/v18.12.1/bin")
 let-env PATH = ($env.PATH | append "~/.cargo/bin")
+let-env PATH = ($env.PATH | append "/usr/local/bin")
 
 zoxide init nushell | save -f ~/.zoxide.nu
