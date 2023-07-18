@@ -44,6 +44,7 @@ alias yw = yarn watch
 alias ys = yarn start
 alias yt = yarn test
 
+alias grh = git reset --hard HEAD
 alias gco = git commit -am
 alias gaa = git add --all
 alias gf = git fetch

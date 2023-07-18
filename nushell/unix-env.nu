@@ -91,4 +91,6 @@ let-env PATH = ($env.PATH | append "~/.nvm/versions/node/v18.12.1/bin")
 let-env PATH = ($env.PATH | append "~/.cargo/bin")
 let-env PATH = ($env.PATH | append "/usr/local/bin")
 
+let-env EDITOR = "code"
+
 zoxide init nushell | save -f ~/.zoxide.nu
