@@ -30,7 +30,7 @@ def create_right_prompt [] {
     let time_segment = ([
         (ansi reset)
         (ansi magenta)
-        (date now | date format "%m/%d/%Y %r")
+        (date now | date format '%m/%d/%Y %r')
     ] | str join)
 
     let last_exit_code = if ($env.LAST_EXIT_CODE != 0) {([
@@ -72,14 +72,14 @@ let-env ENV_CONVERSIONS = {
 #
 # By default, <nushell-config-dir>/scripts is added
 let-env NU_LIB_DIRS = [
-    ($nu.default-config-dir | path join "scripts")
+    ($nu.default-config-dir | path join 'scripts')
 ]
 
 # Directories to search for plugin binaries when calling register
 #
 # By default, <nushell-config-dir>/plugins is added
 let-env NU_PLUGIN_DIRS = [
-    ($nu.default-config-dir | path join "plugins")
+    ($nu.default-config-dir | path join 'plugins')
 ]
 
 # To add entries to PATH (on Windows you might use Path), you can use the following pattern:
@@ -90,7 +90,10 @@ let-env PATH = ($env.PATH | append "/opt/homebrew/opt/openjdk/bin")
 let-env PATH = ($env.PATH | append "~/.nvm/versions/node/v18.12.1/bin")
 let-env PATH = ($env.PATH | append "~/.cargo/bin")
 let-env PATH = ($env.PATH | append "/usr/local/bin")
+let-env PATH = ($env.PATH | append "~/.knode/bin")
+let-env PATH = ($env.PATH | append "~/.kit/bin")
 
 let-env EDITOR = "code"
+let-env KIT_EDITOR = "code"
 
 zoxide init nushell | save -f ~/.zoxide.nu
