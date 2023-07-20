@@ -8,3 +8,5 @@ linux|darwin:
   installs: |
     brew install jandedobbeleer/oh-my-posh/oh-my-posh
     oh-my-posh init nu --config ~/omp.config.json
+  links:
+    config.omp.json: ~/.omp.config.json
