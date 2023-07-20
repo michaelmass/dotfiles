@@ -81,3 +81,5 @@ alias npn = pnpm
 alias npmp = pnpm
 
 alias npmlg = npm list -g --depth 0 # list global packages
+
+alias code = ^open -b com.microsoft.VSCode

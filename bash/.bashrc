@@ -8,3 +8,6 @@ export PATH="~/.knode/bin:$PATH"
 export PATH="~/.kit/bin:$PATH"
 export EDITOR="code"
 export KIT_EDITOR="code"
+
+export PATH="$PATH:/Users/mike/.kit/bin"
+export PATH="$PATH:/Users/mike/.kenv/bin"
