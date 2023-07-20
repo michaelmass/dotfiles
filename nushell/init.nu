@@ -36,6 +36,11 @@ def grmb [] {
 	git branch | lines | where ($it != "* master" and $it != "* main") | each {|br| git branch -D ($br | str trim) } | str trim
 }
 
+def grh [] {
+  let $branch = (git branch --show-current)
+  git reset --hard HEAD/$branch
+}
+
 alias exp = let-env
 
 alias y = yarn
