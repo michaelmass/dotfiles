@@ -32,3 +32,17 @@ Make sure to setup rust correctly in your path and terminal
 ```
 cargo install rotz
 ```
+
+## Linking & Installing
+
+To link all the dotfiles, run the following command:
+
+```
+rotz link
+```
+
+To install all the packages, run the following command:
+
+```
+rotz install
+```
