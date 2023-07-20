@@ -36,6 +36,11 @@ def grmb [] {
 	git branch | lines | where ($it != "* master" and $it != "* main") | each {|br| git branch -D ($br | str trim) } | str trim
 }
 
+def grh [] {
+  let $branch = (git branch --show-current)
+  git reset --hard HEAD/$branch
+}
+
 alias exp = let-env
 
 alias y = yarn
@@ -44,11 +49,13 @@ alias yw = yarn watch
 alias ys = yarn start
 alias yt = yarn test
 
-alias gco = git commit -am 
+alias grh = git reset --hard HEAD
+alias gco = git commit -am
+alias gaa = git add --all
 alias gf = git fetch
 alias gp = git pull
 alias gc = git checkout
-alias gcb = git checkout -b 
+alias gcb = git checkout -b
 alias gcm = git checkout master
 alias gcl = git clone
 alias gs = git stash
@@ -60,7 +67,7 @@ alias ghv = gh repo view --web
 alias ghprv = gh pr view --web
 
 alias db = docker build .
-alias dr = docker run 
+alias dr = docker run
 
 alias c = clear
 
@@ -74,3 +81,5 @@ alias npn = pnpm
 alias npmp = pnpm
 
 alias npmlg = npm list -g --depth 0 # list global packages
+
+alias code = ^open -b com.microsoft.VSCode

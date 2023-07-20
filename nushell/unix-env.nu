@@ -83,9 +83,17 @@ let-env NU_PLUGIN_DIRS = [
 ]
 
 # To add entries to PATH (on Windows you might use Path), you can use the following pattern:
-# let-env PATH = ($env.PATH | split row (char esep) | prepend '/some/path')
+# let-env PATH = ($env.PATH | split row (char esep) | prepend "/some/path")
 let-env PATH = ($env.PATH | append "/opt/homebrew/bin")
 let-env PATH = ($env.PATH | append "/opt/homebrew/sbin")
+let-env PATH = ($env.PATH | append "/opt/homebrew/opt/openjdk/bin")
+let-env PATH = ($env.PATH | append "~/.nvm/versions/node/v18.12.1/bin")
 let-env PATH = ($env.PATH | append "~/.cargo/bin")
+let-env PATH = ($env.PATH | append "/usr/local/bin")
+let-env PATH = ($env.PATH | append "~/.knode/bin")
+let-env PATH = ($env.PATH | append "~/.kit/bin")
+
+let-env EDITOR = "code"
+let-env KIT_EDITOR = "code"
 
 zoxide init nushell | save -f ~/.zoxide.nu
