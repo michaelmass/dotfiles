@@ -38,7 +38,7 @@ def grmb [] {
 
 def grh [] {
   let $branch = (git branch --show-current)
-  git reset --hard HEAD/$branch
+  git reset --hard origin/$branch
 }
 
 alias exp = let-env

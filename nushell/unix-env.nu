@@ -92,6 +92,7 @@ let-env PATH = ($env.PATH | append "~/.cargo/bin")
 let-env PATH = ($env.PATH | append "/usr/local/bin")
 let-env PATH = ($env.PATH | append "~/.knode/bin")
 let-env PATH = ($env.PATH | append "~/.kit/bin")
+let-env PATH = ($env.PATH | append "~/.kenv/bin")
 
 let-env EDITOR = "code"
 let-env KIT_EDITOR = "code"
