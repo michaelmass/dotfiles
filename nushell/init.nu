@@ -60,6 +60,7 @@ alias gcm = git checkout master
 alias gcl = git clone
 alias gs = git stash
 alias gsp = git stash pop
+alias gsd = git stash drop
 alias gpm = git pull origin master
 alias gpom = git pull origin master
 
