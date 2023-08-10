@@ -2,3 +2,8 @@ linux|darwin:
   installs: |
     brew tap homebrew/cask-fonts
     brew install font-hack-nerd-font
+
+windows:
+  installs: |
+    scoop bucket add nerd-fonts
+    scoop install Hack-NF
