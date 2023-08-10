@@ -232,13 +232,13 @@ let light_theme = {
 }
 
 # External completer example
-# let carapace_completer = {|spans| 
+# let carapace_completer = {|spans|
 #     carapace $spans.0 nushell $spans | from json
 # }
 
 
 # The default config record. This is where much of your global configuration is setup.
-let-env config = {
+$env.config = {
   buffer_editor: "code"
   external_completer: $nothing # check 'carapace_completer' above to as example
   filesize_metric: false
