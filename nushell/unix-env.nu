@@ -97,4 +97,6 @@ $env.PATH = ($env.PATH | append "~/.kenv/bin")
 $env.EDITOR = "code"
 $env.KIT_EDITOR = "code"
 
+alias code = ^open -b com.microsoft.VSCode
+
 zoxide init nushell | save -f ~/.zoxide.nu
