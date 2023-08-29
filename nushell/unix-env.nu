@@ -93,6 +93,7 @@ $env.PATH = ($env.PATH | append "/usr/local/bin")
 $env.PATH = ($env.PATH | append "~/.knode/bin")
 $env.PATH = ($env.PATH | append "~/.kit/bin")
 $env.PATH = ($env.PATH | append "~/.kenv/bin")
+$env.PATH = ($env.PATH | append "~/.deno/bin")
 
 $env.EDITOR = "code"
 $env.KIT_EDITOR = "code"
