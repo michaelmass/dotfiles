@@ -37,8 +37,9 @@ def grmb [] {
 }
 
 def grh [] {
-  let $branch = (git branch --show-current)
-  git reset --hard origin/$branch
+  let $branch = (git branch --show-current | str trim)
+  print $"Resetting git to origin/($branch)"
+  git reset --hard $"origin/($branch)"
 }
 
 alias exp = let-env
@@ -49,7 +50,6 @@ alias yw = yarn watch
 alias ys = yarn start
 alias yt = yarn test
 
-alias grh = git reset --hard HEAD
 alias gco = git commit -am
 alias gaa = git add --all
 alias gf = git fetch
