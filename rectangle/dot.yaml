@@ -1,0 +1,7 @@
+windows:
+  installs: false
+
+linux|darwin:
+  installs: |
+    brew install --cask rectangle
+    defaults write com.knollsoft.Rectangle launchOnLogin -bool true
