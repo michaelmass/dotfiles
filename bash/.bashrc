@@ -11,4 +11,3 @@ export KIT_EDITOR="code"
 
 export PATH="$PATH:/Users/mike/.kit/bin"
 export PATH="$PATH:/Users/mike/.kenv/bin"
-. "$HOME/.cargo/env"
