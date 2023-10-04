@@ -94,3 +94,11 @@ def gclean [] {
   gp
   grmb
 }
+
+def gcfu [
+  branch = "mm-update"
+  msg = "update"
+] {
+  gcb $branch
+  gfu $msg
+}
