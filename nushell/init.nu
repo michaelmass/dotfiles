@@ -36,10 +36,16 @@ def grmb [] {
 	git branch | lines | where ($it != "* master" and $it != "* main") | each {|br| git branch -D ($br | str trim) } | str trim
 }
 
-def grh [] {
+def grhard [] {
   let $branch = (git branch --show-current | str trim)
   print $"Resetting git to origin/($branch)"
   git reset --hard $"origin/($branch)"
+}
+
+def grhead [] {
+  let $branch = (git branch --show-current | str trim)
+  print $"Resetting git to origin/($branch)"
+  git reset $"origin/($branch)"
 }
 
 alias exp = let-env
