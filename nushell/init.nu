@@ -73,8 +73,8 @@ alias gpom = git pull origin master
 alias ghv = gh repo view --web
 alias ghprv = gh pr view --web
 
-alias db = docker build .
-alias dr = docker run
+alias docb = docker build .
+alias docr = docker run
 
 alias c = clear
 
@@ -86,6 +86,8 @@ alias ppnm = pnpm
 alias pnp = pnpm
 alias npn = pnpm
 alias npmp = pnpm
+
+alias dr = dagger run deno run -A
 
 alias npmlg = npm list -g --depth 0 # list global packages
 
