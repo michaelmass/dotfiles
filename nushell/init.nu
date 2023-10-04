@@ -82,3 +82,9 @@ alias npn = pnpm
 alias npmp = pnpm
 
 alias npmlg = npm list -g --depth 0 # list global packages
+
+def gclean [] {
+  gcm
+  gp
+  grmb
+}
