@@ -1,5 +1,9 @@
 windows:
-  installs: scoop install 1password
+  installs: |
+    scoop install 1password
+    scoop install 1password-cli
 
 linux|darwin:
-  installs: brew install --cask 1password
+  installs: |
+    brew install --cask 1password
+    brew install --cask 1password-cli

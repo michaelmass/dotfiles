@@ -34,6 +34,7 @@ def gfu [
 
 def grmb [] {
 	git branch | lines | where ($it != "* master" and $it != "* main") | each {|br| git branch -D ($br | str trim) } | str trim
+  git remote prune origin
 }
 
 def grhard [] {
