@@ -34,6 +34,7 @@ def gfu [
 
 def grmb [] {
 	git branch | lines | where ($it != "* master" and $it != "* main") | each {|br| git branch -D ($br | str trim) } | str trim
+  git remote prune origin
 }
 
 def grhard [] {
@@ -60,7 +61,6 @@ alias gco = git commit -am
 alias gaa = git add --all
 alias gf = git fetch
 alias gp = git pull
-alias gc = git checkout
 alias gcb = git checkout -b
 alias gcm = git checkout master
 alias gcl = git clone
@@ -95,6 +95,13 @@ def gclean [] {
   gcm
   gp
   grmb
+}
+
+def gc [
+  branch
+] {
+  git checkout $branch
+  gp
 }
 
 def gcfu [
