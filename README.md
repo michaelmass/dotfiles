@@ -17,7 +17,6 @@ Linux / MacOS
 ```
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 brew install volllly/tap/rotz
-brew tap homebrew/cask-fonts
 ```
 
 Windows

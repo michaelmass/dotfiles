@@ -64,4 +64,4 @@ $env.NU_PLUGIN_DIRS = [
 $env.EDITOR = "code"
 $env.KIT_EDITOR = "code"
 
-echo "" | save -f ~/.zoxide.nu
+zoxide init nushell | save -f ~/.zoxide.nu
