@@ -1,0 +1,7 @@
+windows:
+  installs: |
+    scoop install rustup
+
+linux|darwin:
+  installs: |
+    brew install rustup-init

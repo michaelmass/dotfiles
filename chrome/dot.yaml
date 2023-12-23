@@ -1,5 +1,5 @@
 windows:
-  installs: scoop install chrome
+  installs: scoop install googlechrome
 
 linux|darwin:
   installs: brew install --cask google-chrome
