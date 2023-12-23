@@ -15,14 +15,22 @@
 Linux / MacOS
 
 ```
-brew tap homebrew/cask-fonts
-brew install rust
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+brew install volllly/tap/rotz
 ```
 
 Windows
 
+In powershell run:
+
 ```
-scoop install rust
+iwr -useb get.scoop.sh | iex
+scoop install git
+scoop bucket add extras
+scoop install vcredist2022
+scoop bucket add volllly https://github.com/volllly/scoop-bucket
+scoop install volllly/rotz
+scoop bucket add tilt-dev https://github.com/tilt-dev/scoop-bucket
 ```
 
 Make sure to setup rust correctly in your path and terminal

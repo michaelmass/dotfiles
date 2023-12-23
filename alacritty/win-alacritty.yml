@@ -1,0 +1,6 @@
+shell:
+  program: C:\Users\micha\scoop\shims\nu.exe
+
+font:
+  normal:
+    family: FiraCode Nerd Font Mono

@@ -1,9 +1,9 @@
-linux|darwin:
-  installs: |
-    brew tap homebrew/cask-fonts
-    brew install font-hack-nerd-font
-
 windows:
   installs: |
     scoop bucket add nerd-fonts
-    scoop install Hack-NF
+    scoop install FiraCode-NF-Mono
+
+linux|darwin:
+  installs: |
+    brew tap homebrew/cask-fonts
+    brew install --cask font-fira-mono-nerd-font

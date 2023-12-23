@@ -1,8 +1,9 @@
 windows:
   installs: |
     scoop install https://github.com/JanDeDobbeleer/oh-my-posh/releases/latest/download/oh-my-posh.json
-    sudo oh-my-posh font install
-    oh-my-posh init nu
+    oh-my-posh init nu --config ~/.omp.config.json
+  links:
+    config.omp.json: ~/.omp.config.json
 
 linux|darwin:
   installs: |

@@ -1,0 +1,3 @@
+windows:
+  installs: |
+    scoop install aria2
