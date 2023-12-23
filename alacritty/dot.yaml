@@ -4,9 +4,9 @@ windows:
   depends:
     - vcredist2022
   links:
-    alacritty.yml: ~/AppData/Roaming/alacritty/alacritty.yml
+    win-alacritty.yml: ~/AppData/Roaming/alacritty/alacritty.yml
 
 linux|darwin:
   installs: brew install alacritty
   links:
-    alacritty.yml: ~/.alacritty.yml
+    unix-alacritty.yml: ~/.alacritty.yml
