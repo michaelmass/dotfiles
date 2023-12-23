@@ -1,11 +1,13 @@
 windows:
   installs: |
     scoop install nvm
-    nvm install 18.12.1
-    nvm use 18.12.1
+    # nvm install 18.19.0
+    # sudo nvm use 18.19.0
+  depends:
+    - sudo
 
 linux|darwin:
   installs: |
     # brew install nvm
-    # nvm install 18.12.1
-    # nvm use 18.12.1
+    # nvm install 18.19.0
+    # nvm use 18.19.0
