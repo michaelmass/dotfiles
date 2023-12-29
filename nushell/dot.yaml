@@ -2,12 +2,14 @@ windows:
   installs: scoop install nu
   links:
     init.nu: ~/init.nu
-    win-config.nu: ~/AppData/Roaming/nushell/config.nu
-    win-env.nu: ~/AppData/Roaming/nushell/env.nu
+    win-os.nu: ~/os.nu
+    config.nu: ~/AppData/Roaming/nushell/config.nu
+    env.nu: ~/AppData/Roaming/nushell/env.nu
 
 linux|darwin:
   installs: brew install nushell
   links:
     init.nu: ~/init.nu
-    unix-config.nu: ~/Library/Application Support/nushell/config.nu
-    unix-env.nu: ~/Library/Application Support/nushell/env.nu
+    unix-os.nu: ~/os.nu
+    config.nu: ~/Library/Application Support/nushell/config.nu
+    env.nu: ~/Library/Application Support/nushell/env.nu

@@ -1,0 +1,7 @@
+windows:
+  installs: |
+    npm i -g pnpm
+
+linux|darwin:
+  installs: |
+    npm i -g pnpm
