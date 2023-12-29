@@ -1,5 +1,9 @@
 source ~/.oh-my-posh.nu
-source ~/.zoxide.nu
+# source ~/.zoxide.nu
+source ~/os.nu
+
+$env.EDITOR = "code"
+$env.KIT_EDITOR = "code"
 
 def gfu [
   msg = "update"
@@ -87,6 +91,8 @@ alias pnp = pnpm
 alias npn = pnpm
 alias npmp = pnpm
 
+alias cat = bat
+
 alias dr = dagger run deno run -A
 
 alias npmlg = npm list -g --depth 0 # list global packages
@@ -111,3 +117,5 @@ def gcfu [
   gcb $branch
   gfu $msg
 }
+
+clear

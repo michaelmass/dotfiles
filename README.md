@@ -35,22 +35,17 @@ scoop bucket add tilt-dev https://github.com/tilt-dev/scoop-bucket
 
 Make sure to setup rust correctly in your path and terminal
 
-3. Install `rotz`
-
-```
-cargo install rotz
-```
-
-## Linking & Installing
-
-To link all the dotfiles, run the following command:
+3. Use `rotz` to link && install all the dotfiles
 
 ```
 rotz link
-```
-
-To install all the packages, run the following command:
-
-```
 rotz install
 ```
+
+On windows there are some software that are not yet supported by scoop, so you will have to install them manually:
+
+- [1password8](https://1password.com/downloads/windows/)
+- [scriptkit](https://scriptkit.com/)
+- [nordvpn](https://nordvpn.com/)
+- [steam]()
+- [battlenet]()
