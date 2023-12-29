@@ -1,7 +1,11 @@
 windows:
   installs: |
     npm i -g pnpm
+  depends:
+    - node
 
 linux|darwin:
   installs: |
     npm i -g pnpm
+  depends:
+    - node

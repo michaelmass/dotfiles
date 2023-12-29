@@ -47,5 +47,7 @@ On windows there are some software that are not yet supported by scoop, so you w
 - [1password8](https://1password.com/downloads/windows/)
 - [scriptkit](https://scriptkit.com/)
 - [nordvpn](https://nordvpn.com/)
+- [Docker Desktop]()
+- [linear]()
 - [steam]()
 - [battlenet]()

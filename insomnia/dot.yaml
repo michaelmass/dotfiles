@@ -1,0 +1,7 @@
+windows:
+  installs: |
+    scoop install insomnia
+
+linux|darwin:
+  installs: |
+    brew install --cask insomnia

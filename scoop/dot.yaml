@@ -1,0 +1,6 @@
+windows:
+  installs: |
+    scoop config aria2-warning-enabled false
+
+linux|darwin:
+  installs: false
