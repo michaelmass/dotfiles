@@ -1,5 +1,5 @@
 source ~/.oh-my-posh.nu
-# source ~/.zoxide.nu
+source ~/.zoxide.nu
 source ~/os.nu
 
 $env.EDITOR = "code"
