@@ -1,1 +1,1 @@
-$env.Path = ($env.PATH | append "~/.deno/bin")
+$env.Path = ($env.Path | append "~/.deno/bin")

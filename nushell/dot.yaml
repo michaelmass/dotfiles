@@ -3,6 +3,7 @@ windows:
   links:
     init.nu: ~/init.nu
     win-os.nu: ~/os.nu
+    zoxide.nu: ~/.zoxide.nu
     config.nu: ~/AppData/Roaming/nushell/config.nu
     env.nu: ~/AppData/Roaming/nushell/env.nu
 
@@ -10,6 +11,7 @@ linux|darwin:
   installs: brew install nushell
   links:
     init.nu: ~/init.nu
+    zoxide.nu: ~/.zoxide.nu
     unix-os.nu: ~/os.nu
     config.nu: ~/Library/Application Support/nushell/config.nu
     env.nu: ~/Library/Application Support/nushell/env.nu
