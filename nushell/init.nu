@@ -112,7 +112,7 @@ def gc [
 
 def gcfu [
   branch = "mm-update"
-  msg = "update"
+  --msg (-m) = "update"
 ] {
   gcb $branch
   gfu $msg
