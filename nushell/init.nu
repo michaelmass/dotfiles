@@ -57,39 +57,40 @@ alias exp = let-env
 
 alias y = yarn
 alias yd = yarn dev
-alias yw = yarn watch
 alias ys = yarn start
 alias yt = yarn test
+alias yw = yarn watch
 
-alias gco = git commit -am
 alias gaa = git add --all
+alias gcb = git checkout -b
+alias gcl = git clone
+alias gcm = git checkout master
+alias gco = git commit -am
 alias gf = git fetch
 alias gp = git pull
-alias gcb = git checkout -b
-alias gcm = git checkout master
-alias gcl = git clone
-alias gs = git stash
-alias gsp = git stash pop
-alias gsd = git stash drop
 alias gpm = git pull origin master
 alias gpom = git pull origin master
+alias grmrf = git clean -fxd
+alias gs = git stash
+alias gsd = git stash drop
+alias gsp = git stash pop
 
-alias ghv = gh repo view --web
 alias ghprv = gh pr view --web
+alias ghv = gh repo view --web
 
 alias docb = docker build .
 alias docr = docker run
 
 alias c = clear
 
-alias tu = tilt up
 alias td = tilt down
+alias tu = tilt up
 
-alias p = pnpm
-alias ppnm = pnpm
-alias pnp = pnpm
-alias npn = pnpm
 alias npmp = pnpm
+alias npn = pnpm
+alias p = pnpm
+alias pnp = pnpm
+alias ppnm = pnpm
 
 alias cat = bat
 
