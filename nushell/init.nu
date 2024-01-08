@@ -53,6 +53,11 @@ def grhead [] {
   git reset $"origin/($branch)"
 }
 
+def gs [] {
+  git add --all
+  git stash
+}
+
 alias exp = let-env
 
 alias y = yarn
@@ -71,7 +76,6 @@ alias gp = git pull
 alias gpm = git pull origin master
 alias gpom = git pull origin master
 alias grmrf = git clean -fxd
-alias gs = git stash
 alias gsd = git stash drop
 alias gsp = git stash pop
 
@@ -123,7 +127,8 @@ def gcfu [
   gfu -p true $msg
 
   if $merge {
-
+    gh pr merge --squash --auto
+    gclean
   }
 }
 
