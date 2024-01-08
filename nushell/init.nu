@@ -7,7 +7,7 @@ $env.KIT_EDITOR = "code"
 
 def gfu [
   msg = "update"
-  --pr (-p) = true
+  --pr (-p) = false
 ] {
   git add --all
 
@@ -30,9 +30,9 @@ def gfu [
   }
 
   if ($pr) {
-    gh pr create --fill --web
+    gh pr create --fill-first
   } else {
-    gh pr view --web
+    gh pr create --fill-first --web
   }
 }
 
@@ -117,9 +117,14 @@ def gc [
 def gcfu [
   msg = "update"
   --branch (-b) = "mm-update"
+  --merge (-m) = false
 ] {
   gcb $branch
-  gfu -p $msg
+  gfu -p true $msg
+
+  if $merge {
+
+  }
 }
 
 clear
