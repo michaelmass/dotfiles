@@ -91,6 +91,7 @@ alias npn = pnpm
 alias p = pnpm
 alias pnp = pnpm
 alias ppnm = pnpm
+alias pnpmlg = pnpm list -g
 
 alias cat = bat
 

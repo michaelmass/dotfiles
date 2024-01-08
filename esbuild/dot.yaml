@@ -1,0 +1,9 @@
+windows:
+  installs: pnpm i -g esbuild
+  depends:
+    - pnpm
+
+linux|darwin:
+  installs: pnpm i -g esbuild
+  depends:
+    - pnpm

@@ -1,0 +1,19 @@
+[font.normal]
+family = "FiraCode Nerd Font Mono"
+
+[[keyboard.bindings]]
+action = "Paste"
+key = "V"
+mods = "Control"
+
+[[keyboard.bindings]]
+action = "Copy"
+key = "C"
+mods = "Control"
+
+[shell]
+program = "/opt/homebrew/bin/nu"
+
+[window]
+opacity = 0.9
+startup_mode = "Maximized"

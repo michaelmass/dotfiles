@@ -9,4 +9,4 @@ windows:
 linux|darwin:
   installs: brew install alacritty
   links:
-    unix-alacritty.yml: ~/.alacritty.yml
+    unix-alacritty.toml: ~/.alacritty.toml
