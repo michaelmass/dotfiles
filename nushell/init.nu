@@ -119,7 +119,7 @@ def gcfu [
   --branch (-b) = "mm-update"
 ] {
   gcb $branch
-  gfu $msg
+  gfu -p $msg
 }
 
 clear
