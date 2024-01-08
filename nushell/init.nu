@@ -121,15 +121,18 @@ def gc [
 def gcfu [
   msg = "update"
   --branch (-b) = "mm-update"
-  --merge (-m) = false
 ] {
   gcb $branch
   gfu -p true $msg
+}
 
-  if $merge {
-    gh pr merge --squash --auto
-    gclean
-  }
+def gcfumerge [
+  msg = "update"
+  --branch (-b) = "mm-update"
+] {
+  gcfu -b $branch $msg
+  gh pr merge --squash --auto
+  gclean
 }
 
 clear
