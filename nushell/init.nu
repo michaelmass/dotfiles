@@ -99,6 +99,8 @@ alias dr = dagger run deno run -A
 
 alias npmlg = npm list -g --depth 0 # list global packages
 
+alias bottom = btm
+
 def gclean [] {
   gcm
   gp
@@ -113,8 +115,8 @@ def gc [
 }
 
 def gcfu [
-  branch = "mm-update"
-  --msg (-m) = "update"
+  msg = "update"
+  --branch (-b) = "mm-update"
 ] {
   gcb $branch
   gfu $msg
