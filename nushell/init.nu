@@ -81,6 +81,7 @@ alias gsp = git stash pop
 
 alias ghprv = gh pr view --web
 alias ghv = gh repo view --web
+alias ghprmerge = gh pr merge --squash --auto
 
 alias docb = docker build .
 alias docr = docker run
@@ -131,7 +132,7 @@ def gcfumerge [
   --branch (-b) = "mm-update"
 ] {
   gcfu -b $branch $msg
-  gh pr merge --squash --auto
+  ghprmerge
   gclean
 }
 
