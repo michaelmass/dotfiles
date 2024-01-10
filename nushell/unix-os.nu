@@ -1,3 +1,6 @@
+$env.PNPM_HOME = $"($env.HOME)/Library/pnpm"
+
+$env.PATH = ($env.PATH | append $env.PNPM_HOME)
 $env.PATH = ($env.PATH | append "/opt/homebrew/bin")
 $env.PATH = ($env.PATH | append "/opt/homebrew/sbin")
 $env.PATH = ($env.PATH | append "/opt/homebrew/opt/openjdk/bin")

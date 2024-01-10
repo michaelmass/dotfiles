@@ -1,0 +1,5 @@
+windows:
+  installs: scoop install googlechrome
+
+linux|darwin:
+  installs: brew list google-chrome &>/dev/null || brew install --cask google-chrome
