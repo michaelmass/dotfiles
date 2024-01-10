@@ -1,13 +1,11 @@
 windows:
   installs: |
     npm i -g pnpm
-    pnpm setup
   depends:
     - node
 
 linux|darwin:
   installs: |
     npm i -g pnpm
-    pnpm setup
   depends:
     - node
