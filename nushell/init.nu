@@ -82,7 +82,7 @@ alias gsp = git stash pop
 alias ghprv = gh pr view --web
 alias ghv = gh repo view --web
 def ghprmerge [] {
-  gh pr merge --squash --auto
+  gh pr merge --squash
   gclean
 }
 
