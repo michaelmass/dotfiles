@@ -1,0 +1,6 @@
+windows:
+  installs: false
+
+linux|darwin:
+  installs: |
+    brew install --cask onyx
