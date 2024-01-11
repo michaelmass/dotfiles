@@ -33,7 +33,7 @@ def gfu [
     gh pr create --fill-first
     echo "Press enter to continue"
   } else {
-    gh pr create --fill-first --web
+    # gh pr create --fill-first --web
   }
   ghprv
 }
