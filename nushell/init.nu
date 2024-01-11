@@ -31,11 +31,10 @@ def gfu [
 
   if ($pr) {
     gh pr create --fill-first
-    echo "Press enter to continue"
+    ghprv
   } else {
-    # gh pr create --fill-first --web
+    gh pr create --fill-first --web
   }
-  ghprv
 }
 
 def grmb [] {
