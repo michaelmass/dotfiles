@@ -31,7 +31,7 @@ def gfu [
 
   if ($pr) {
     gh pr create --fill-first
-    ghprv
+    gh pr view --web
   } else {
     gh pr create --fill-first --web
   }
