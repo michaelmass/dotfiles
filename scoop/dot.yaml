@@ -1,6 +1,8 @@
 windows:
   installs: |
     scoop config aria2-warning-enabled false
+    scoop bucket add extras
+    scoop bucket add versions
 
 linux|darwin:
   installs: false
