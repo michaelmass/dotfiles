@@ -1,11 +1,11 @@
 windows:
   installs: |
-    npm i -g pnpm
+    scoop install pnpm
   depends:
     - node
 
 linux|darwin:
   installs: |
-    npm i -g pnpm
+    brew install pnpm
   depends:
     - node
