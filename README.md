@@ -4,42 +4,18 @@
 
 ## Requirements
 
-1. Start by installing a package manager to script the rest of the installation of other tools:
-
-- Homebrew (MacOS)
-- Linuxbrew (linux)
-- Scoop (Windows)
-
-2. Then, install rust which will give access to cargo:
+Run the following commands:
 
 Linux / MacOS
 
-```
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-brew install volllly/tap/rotz
+```bash
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/michaelmass/dotfiles/master/install.sh)"
 ```
 
 Windows
 
-In powershell run:
-
-```
-iwr -useb get.scoop.sh | iex
-scoop install git
-scoop bucket add extras
-scoop install vcredist2022
-scoop bucket add volllly https://github.com/volllly/scoop-bucket
-scoop install volllly/rotz
-scoop bucket add tilt-dev https://github.com/tilt-dev/scoop-bucket
-```
-
-Make sure to setup rust correctly in your path and terminal
-
-3. Use `rotz` to link && install all the dotfiles
-
-```
-rotz link
-rotz install
+```powershell
+iex ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/michaelmass/dotfiles/master/install.ps1'))
 ```
 
 On windows there are some software that are not yet supported by scoop, so you will have to install them manually:
