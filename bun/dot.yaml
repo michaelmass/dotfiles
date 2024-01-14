@@ -1,0 +1,8 @@
+windows:
+  installs: |
+    scoop install bun-canary
+
+linux|darwin:
+  installs: |
+    brew tap oven-sh/bun
+    brew install bun
