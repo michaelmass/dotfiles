@@ -63,6 +63,16 @@ def gs [] {
   git stash
 }
 
+def ghreponew [
+  repo
+  --org (-o) = "michaelmass"
+  --private (-p) = true
+] {
+  gh repo create $"--private=($private)" $"($org)/($repo)"
+  gh repo clone $"($org)/($repo)" $"($nu.home-path)/Documents/dev/($repo)"
+  code $"($nu.home-path)/Documents/dev/($repo)"
+}
+
 alias exp = let-env
 
 alias y = yarn
