@@ -15,6 +15,7 @@ Linux / MacOS
 Windows
 
 ```powershell
+Set-ExecutionPolicy RemoteSigned -scope CurrentUser
 iex ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/michaelmass/dotfiles/master/install.ps1'))
 ```
 
