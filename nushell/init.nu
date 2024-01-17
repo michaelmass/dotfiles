@@ -73,6 +73,15 @@ def ghreponew [
   code $"($nu.home-path)/Documents/dev/($repo)"
 }
 
+def ghrepoclone [
+  repo
+  --folder (-f) = ""
+] {
+  let directory = ([$nu.home-path "Documents/dev" $folder $repo] | path join)
+  gh repo clone $repo $directory
+  code $directory
+}
+
 alias exp = let-env
 
 alias y = yarn
