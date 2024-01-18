@@ -67,18 +67,23 @@ def ghreponew [
   repo
   --org (-o) = "michaelmass"
   --private (-p) = true
+  --folder (-f) = ""
 ] {
-  gh repo create $"--private=($private)" $"($org)/($repo)"
-  gh repo clone $"($org)/($repo)" $"($nu.home-path)/Documents/dev/($repo)"
-  code $"($nu.home-path)/Documents/dev/($repo)"
+  let target = ([$folder, $repo] | where ($it != "") | first)
+  let directory = ([$nu.home-path "Documents/dev" $target] | path join)
+  gh repo create --add-readme $"--private=($private)" $"($org)/($repo)"
+  gh repo clone $"($org)/($repo)" $directory
+  code $directory
 }
 
 def ghrepoclone [
   repo
+  --org (-o) = "michaelmass"
   --folder (-f) = ""
 ] {
-  let directory = ([$nu.home-path "Documents/dev" $folder $repo] | path join)
-  gh repo clone $repo $directory
+  let target = ([$folder, $repo] | where ($it != "") | first)
+  let directory = ([$nu.home-path "Documents/dev" $target] | path join)
+  gh repo clone $"($org)/($repo)" $directory
   code $directory
 }
 
