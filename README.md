@@ -28,3 +28,4 @@ On windows there are some software that are not yet supported by scoop, so you w
 - [linear](https://linear.app/download)
 - [steam](https://store.steampowered.com/)
 - [battle.net](https://us.shop.battle.net/en-us)
+- [arc](https://arc.net/)
