@@ -47,6 +47,7 @@ def grmb [] {
 }
 
 def grhard [] {
+  git add --all
   let $branch = (git branch --show-current | str trim)
   print $"Resetting git to origin/($branch)"
   git reset --hard $"origin/($branch)"
