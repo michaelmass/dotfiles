@@ -170,4 +170,12 @@ def gcfumerge [
   ghprmerge
 }
 
+def new [
+  filename
+] {
+  mkdir ($filename | path dirname)
+  touch $filename
+  code $filename
+}
+
 clear
