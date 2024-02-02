@@ -108,6 +108,7 @@ alias gpom = git pull origin master
 alias grmrf = git clean -fxd
 alias gsd = git stash drop
 alias gsp = git stash pop
+alias glogjson = git log --pretty=format:'{"commit": "%H", "author": "%an <%ae>", "date": "%ad", "message": "%f"},' --date=iso
 
 alias ghprv = gh pr view --web
 alias ghv = gh repo view --web
