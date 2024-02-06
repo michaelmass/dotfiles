@@ -1,0 +1,5 @@
+windows:
+  installs: scoop install dagger
+
+linux|darwin:
+  installs: brew install dagger
