@@ -1,3 +1,4 @@
+# Update scoop if it's already installed, otherwise install it
 if (Get-Command scoop -errorAction SilentlyContinue) {
   scoop update
 } else {
