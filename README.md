@@ -1,6 +1,6 @@
 # Dotfiles
 
-> All the required files to setup a new desktop
+> All the required files to setup a new desktop by installing the required software and setting up the configuration files.
 
 ## Requirements
 
