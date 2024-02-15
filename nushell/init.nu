@@ -157,7 +157,7 @@ def gc [
 }
 
 def gcfu [
-  msg = "update"
+  msg = ""
   --branch (-b) = "mm-update"
   --web (-w) = true
   --skipci (-s) = false
