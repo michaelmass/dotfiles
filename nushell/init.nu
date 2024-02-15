@@ -160,7 +160,7 @@ def gcfu [
   msg = "update"
   --branch (-b) = "mm-update"
   --web (-w) = true
-  --skipci (-s) = false
+  --skipci (-s)
   ] {
   gcb $branch
   gfu -p true -w $web --skipci=$skipci $msg
@@ -169,7 +169,7 @@ def gcfu [
 def gcfumerge [
   msg = "update"
   --branch (-b) = "mm-update"
-  --skipci (-s) = false
+  --skipci (-s)
   ] {
   gcfu -w false -b $branch --skipci=$skipci $msg
   ghprmerge
