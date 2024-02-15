@@ -9,7 +9,7 @@ def gfu [
   msg = "update"
   --pr (-p) = false
   --web (-w) = true
-  --skipci
+  --skipci (-s)
 ] {
   git add --all
 
