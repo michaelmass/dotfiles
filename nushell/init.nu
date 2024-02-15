@@ -9,10 +9,11 @@ def gfu [
   msg = "update"
   --pr (-p) = false
   --web (-w) = true
+  --skipci (-s)
 ] {
   git add --all
 
-  let $commit = (git commit -m $msg | complete)
+  let $commit = (git commit -m ([$msg (if $skipci { ' [skip ci]' } else { '' })] | str join) | complete)
 
   echo $commit.stdout
 
@@ -159,16 +160,18 @@ def gcfu [
   msg = "update"
   --branch (-b) = "mm-update"
   --web (-w) = true
-] {
+  --skipci (-s)
+  ] {
   gcb $branch
-  gfu -p true -w $web $msg
+  gfu -p true -w $web --skipci=$skipci $msg
 }
 
 def gcfumerge [
   msg = "update"
   --branch (-b) = "mm-update"
-] {
-  gcfu -w false -b $branch $msg
+  --skipci (-s)
+  ] {
+  gcfu -w false -b $branch --skipci=$skipci $msg
   ghprmerge
 }
 
