@@ -1,0 +1,8 @@
+# See https://developer.apple.com/library/archive/documentation/General/Conceptual/DevPedia-CocoaCore/UniformTypeIdentifier.html
+darwin:
+  installs: |
+    brew install duti
+    duti -s com.microsoft.VSCode public.data all
+    duti -s com.microsoft.VSCode public.text all
+    duti -s com.microsoft.VSCode public.plain-text all
+    duti -s com.microsoft.VSCode public.yaml all
