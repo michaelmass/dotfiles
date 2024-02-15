@@ -9,7 +9,7 @@ def gfu [
   msg = "update"
   --pr (-p) = false
   --web (-w) = true
-  --skipci (-s) = false
+  --skipci
 ] {
   git add --all
 
@@ -157,13 +157,13 @@ def gc [
 }
 
 def gcfu [
-  msg = ""
+  msg = "update"
   --branch (-b) = "mm-update"
   --web (-w) = true
   --skipci (-s) = false
   ] {
   gcb $branch
-  gfu -p true -w $web -s $skipci $msg
+  gfu -p true -w $web --skipci=$skipci $msg
 }
 
 def gcfumerge [
@@ -171,7 +171,7 @@ def gcfumerge [
   --branch (-b) = "mm-update"
   --skipci (-s) = false
   ] {
-  gcfu -w false -b $branch -s $skipci $msg
+  gcfu -w false -b $branch --skipci=$skipci $msg
   ghprmerge
 }
 
