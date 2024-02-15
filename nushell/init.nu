@@ -13,8 +13,7 @@ def gfu [
 ] {
   git add --all
 
-  let $skip_message = if $skipci { ' [skip ci]' } else { '' }
-  let $commit = (git commit -m ([$msg $skip_message] | str join) | complete)
+  let $commit = (git commit -m ([$msg (if $skipci { ' [skip ci]' } else { '' })] | str join) | complete)
 
   echo $commit.stdout
 
