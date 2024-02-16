@@ -123,6 +123,9 @@ alias docr = docker run
 
 alias c = clear
 
+alias gor = go run .
+alias gob = go build .
+
 alias td = tilt down
 alias tu = tilt up
 
