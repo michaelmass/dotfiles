@@ -1,0 +1,7 @@
+windows:
+  installs: |
+    scoop install openlens
+
+linux|darwin:
+  installs: |
+    brew install --cask openlens
