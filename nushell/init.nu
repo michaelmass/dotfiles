@@ -15,13 +15,20 @@ def gfu [
 ] {
   git add --all
 
-  let $commit = (git commit -m ([$msg (if $skipci { ' [skip ci]' } else { '' })] | str join) | complete)
+  let $msg = ([$msg (if $skipci { ' [skip ci]' } else { '' })] | str join)
+  let $commit = (git commit -m $msg | complete)
 
   echo $commit.stdout
 
   if $commit.stderr? != "" and $commit.stderr? != null {
     error make {
       msg: $commit.stderr
+    }
+  }
+
+  if $commit.exit_code == 1 and not ($commit.stdout | str contains "nothing to commit")  {
+    error make {
+      msg: "commit failed"
     }
   }
 
