@@ -5,6 +5,8 @@ source ~/os.nu
 $env.EDITOR = "code"
 $env.KIT_EDITOR = "code"
 
+$env.K8S_NAMESPACE = "default"
+
 def gfu [
   msg = "update"
   --pr (-p) = false
@@ -89,8 +91,6 @@ def ghrepoclone [
   code $directory
 }
 
-alias exp = let-env
-
 alias y = yarn
 alias yd = yarn dev
 alias ys = yarn start
@@ -144,6 +144,19 @@ alias dr = dagger run deno run -A
 alias npmlg = npm list -g --depth 0 # list global packages
 
 alias bottom = btm
+
+alias k = kubectl --namespace $env.K8S_NAMESPACE
+
+alias h = helm --namespace $env.K8S_NAMESPACE
+alias hls = helm ls --namespace $env.K8S_NAMESPACE
+alias hup = helm upgrade --namespace $env.K8S_NAMESPACE --install --atomic --create-namespace --cleanup-on-fail
+alias hdep = helm dependency build
+
+def --env kns [
+  namespace
+] {
+  $env.K8S_NAMESPACE = $namespace
+}
 
 def gclean [] {
   gcm
