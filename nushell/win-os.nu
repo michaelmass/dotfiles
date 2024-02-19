@@ -1,4 +1,4 @@
 $env.PNPM_HOME = $"($env.LOCALAPPDATA)/pnpm"
 
-$env.PATH = ($env.PATH | append $env.PNPM_HOME)
-$env.PATH = ($env.PATH | append "~/.deno/bin")
+$env.Path = ($env.Path | append $env.PNPM_HOME)
+$env.Path = ($env.Path | append "~/.deno/bin")
