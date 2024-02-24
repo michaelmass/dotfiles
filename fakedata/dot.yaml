@@ -1,2 +1,0 @@
-linux|darwin:
-  installs: brew install lucapette/tap/fakedata
