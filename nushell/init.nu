@@ -124,6 +124,17 @@ alias glogjson = git log --pretty=format:'{"commit": "%H", "author": "%an <%ae>"
 alias ghprv = gh pr view --web
 alias ghv = gh repo view --web
 
+def ghpropen [
+  --draft (-d) = false
+  --web (-w) = true
+] {
+  gh pr create --fill-first $"--draft=($draft)"
+
+  if ($web) {
+    gh pr view --web
+  }
+}
+
 def ghprapprove [
   pr
   --repo (-r) = ""
