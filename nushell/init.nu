@@ -11,6 +11,7 @@ def gfu [
   msg = "update"
   --pr (-p) = false
   --web (-w) = true
+  --draft (-d) = false
   --skipci (-s)
 ] {
   git add --all
@@ -41,13 +42,13 @@ def gfu [
   }
 
   if ($pr) {
-    gh pr create --fill-first
+    gh pr create --fill-first $"--draft=($draft)"
 
     if ($web) {
       gh pr view --web
     }
   } else {
-    gh pr create --fill-first --web
+    gh pr create --fill-first $"--draft=($draft)" --web
   }
 }
 
@@ -122,6 +123,13 @@ alias glogjson = git log --pretty=format:'{"commit": "%H", "author": "%an <%ae>"
 
 alias ghprv = gh pr view --web
 alias ghv = gh repo view --web
+
+def ghprapprove [
+  pr
+] {
+  gh pr review $pr --approve -b "LGTM"
+}
+
 def ghprmerge [] {
   gh pr merge --squash
   gclean
@@ -185,18 +193,20 @@ def gcfu [
   msg = "update"
   --branch (-b) = "mm-update"
   --web (-w) = true
+  --draft (-d)
   --skipci (-s)
   ] {
   gcb $branch
-  gfu -p true -w $web --skipci=$skipci $msg
+  gfu -p true -w $web --skipci=$skipci --draft=$draft $msg
 }
 
 def gcfumerge [
   msg = "update"
   --branch (-b) = "mm-update"
+  --draft (-d)
   --skipci (-s)
   ] {
-  gcfu -w false -b $branch --skipci=$skipci $msg
+  gcfu -w false -b $branch --skipci=$skipci --draft=$draft $msg
   ghprmerge
 }
 
