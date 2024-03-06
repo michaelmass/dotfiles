@@ -126,13 +126,17 @@ alias ghv = gh repo view --web
 
 def ghprapprove [
   pr
+  --repo (-r) = ""
+  --msg (-m) = "LGTM"
 ] {
-  gh pr review $pr --approve -b "LGTM"
+  gh pr review $pr $"--repo=($repo)" --approve --body $""($msg)""
 }
 
-def ghprmerge [] {
-  gh pr merge --squash
-  gclean
+def ghprmerge [
+  pr = ""
+  --repo (-r) = ""
+] {
+  gh pr merge $pr --squash $"--repo=($repo)"
 }
 
 alias docb = docker build .
@@ -208,6 +212,7 @@ def gcfumerge [
   ] {
   gcfu -w false -b $branch --skipci=$skipci --draft=$draft $msg
   ghprmerge
+  gclean
 }
 
 def new [
