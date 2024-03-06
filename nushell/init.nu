@@ -80,7 +80,8 @@ def ghreponew [
   --private (-p) = true
   --folder (-f) = ""
 ] {
-  let target = ([$folder, $repo] | where ($it != "") | first)
+  let repoWithOwner = ([$org, $repo] | path join)
+  let target = ([$folder, $repoWithOwner] | where ($it != "") | first)
   let directory = ([$nu.home-path "Documents/dev" $target] | path join)
   gh repo create --add-readme $"--private=($private)" $"($org)/($repo)"
   gh repo clone $"($org)/($repo)" $directory
@@ -92,7 +93,8 @@ def ghrepoclone [
   --org (-o) = "michaelmass"
   --folder (-f) = ""
 ] {
-  let target = ([$folder, $repo] | where ($it != "") | first)
+  let repoWithOwner = ([$org, $repo] | path join)
+  let target = ([$folder, $repoWithOwner] | where ($it != "") | first)
   let directory = ([$nu.home-path "Documents/dev" $target] | path join)
   gh repo clone $"($org)/($repo)" $directory
   code $directory
