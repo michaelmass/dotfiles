@@ -4,4 +4,7 @@ windows:
 linux|darwin:
   installs: false
   links:
+    .bash_profile: ~/.bash_profile
     .bashrc: ~/.bashrc
+    .profile: ~/.profile
+    .zshrc: ~/.zshrc
