@@ -2,9 +2,6 @@ source ~/.oh-my-posh.nu
 source ~/.zoxide.nu
 source ~/os.nu
 
-$env.EDITOR = "code"
-$env.KIT_EDITOR = "code"
-
 $env.K8S_NAMESPACE = "default"
 
 def gfu [
