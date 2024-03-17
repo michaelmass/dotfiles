@@ -37,7 +37,7 @@
             "fetch_upstream_icon": true
           },
           "style": "powerline",
-          "template": "  {{ .UpstreamIcon }}{{ .HEAD }} {{ .BranchStatus }} {{ if gt .StashCount 0 }} {{ .StashCount }} {{ end }}{{ if .Working.Changed }}\uF044 {{ end }}{{ if .Staging.Changed }}\uF046 {{ end }}",
+          "template": "  {{ .UpstreamIcon }} {{ .HEAD }} {{ .BranchStatus }} {{ if gt .StashCount 0 }} {{ .StashCount }} {{ end }}{{ if .Working.Changed }}\uF044 {{ end }}{{ if .Staging.Changed }}\uF046 {{ end }}",
           "type": "git"
         }
       ],
