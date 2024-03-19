@@ -104,12 +104,16 @@ def ghrepoclone [
   repo
   --org (-o) = "michaelmass"
   --folder (-f) = ""
+  --open = true
 ] {
   let repoWithOwner = ([$org, $repo] | path join)
   let target = ([$folder, $repoWithOwner] | where ($it != "") | first)
   let directory = ([$nu.home-path "Documents/dev" $target] | path join)
   gh repo clone $"($org)/($repo)" $directory
-  code $directory
+
+  if ($open) {
+    code $directory
+  }
 }
 
 alias y = yarn
@@ -172,6 +176,12 @@ def ghprcheck [
   let directory = ternary ($repo == "") $env.PWD ([$nu.home-path "Documents/dev" $repo] | path join)
 
   echo $"Directory is ($directory)"
+
+  if ((not ($directory | path exists)) and ($repo != "")) {
+    let parts = ($repo | split row "/")
+    ghrepoclone --org=($parts | first) --open=false ($parts | last)
+  }
+
   mkerr "Directory does not exist" -c (not ($directory | path exists))
 
   cd $directory
