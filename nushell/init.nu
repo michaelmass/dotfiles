@@ -267,6 +267,16 @@ def gcfumerge [
   gclean
 }
 
+def gfumerge [
+  msg = "update"
+  --draft (-d)
+  --skipci (-s)
+  ] {
+  gfu -p true -w false --skipci=$skipci --draft=$draft $msg
+  ghprmerge
+  gclean
+}
+
 def new [
   filename
 ] {
