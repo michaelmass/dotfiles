@@ -158,6 +158,13 @@ def ghprapprove [
   gh pr review $pr $"--repo=($repo)" --approve --body $""($msg)""
 }
 
+def ghprls [
+  --repo (-r) = ""
+  --author (-a) = "@me"
+] {
+  gh pr list $"--repo=($repo)" $"--author=($author)"
+}
+
 def ghprmerge [
   pr = ""
   --repo (-r) = ""
