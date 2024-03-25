@@ -27,6 +27,15 @@ def ternary [
   }
 }
 
+def dotenv [
+  file = ".env"
+] {
+  let $file = ([$file ".env"] | where ($it | path exists) | first)
+  let $lines = (open --raw $file | lines | str trim | compact --empty | filter {|it| ($it | str starts-with "#" | not $in)})
+  let $record = ($lines | split column "=" | reduce -f {} {|it, acc| $acc | upsert $it.column1 $it.column2 })
+  return $record
+}
+
 def gfu [
   msg = "update"
   --pr (-p) = false
