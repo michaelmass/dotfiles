@@ -12,6 +12,9 @@ Linux / MacOS
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/michaelmass/dotfiles/master/install.sh)"
 ```
 
+Also, for setting configuration see:
+[Set up a Mac in 2024](https://www.youtube.com/watch?v=GK7zLYAXdDs)
+
 Windows
 
 ```powershell
