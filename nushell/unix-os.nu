@@ -1,15 +1,20 @@
 $env.PNPM_HOME = $"($env.HOME)/Library/pnpm"
 
-$env.PATH = ($env.PATH | append $env.PNPM_HOME)
-$env.PATH = ($env.PATH | append "/opt/homebrew/bin")
-$env.PATH = ($env.PATH | append "/opt/homebrew/sbin")
-$env.PATH = ($env.PATH | append "/opt/homebrew/opt/openjdk/bin")
-$env.PATH = ($env.PATH | append "~/.nvm/versions/node/v18.12.1/bin")
-$env.PATH = ($env.PATH | append "~/.cargo/bin")
-$env.PATH = ($env.PATH | append "/usr/local/bin")
-$env.PATH = ($env.PATH | append "~/.knode/bin")
-$env.PATH = ($env.PATH | append "~/.kit/bin")
-$env.PATH = ($env.PATH | append "~/.kenv/bin")
-$env.PATH = ($env.PATH | append "~/.deno/bin")
+$env.ANDROID_HOME = $"($env.HOME)/Library/Android/sdk"
+
+let $paths = [
+  $env.PNPM_HOME,
+  "/opt/homebrew/bin",
+  "/opt/homebrew/sbin",
+  "/opt/homebrew/opt/openjdk/bin",
+  "~/.nvm/versions/node/v18.12.1/bin",
+  "~/.cargo/bin",
+  "~/.knode/bin",
+  "~/.kit/bin",
+  "~/.deno/bin",
+  "/usr/local/bin",
+]
+
+$env.PATH = ($env.PATH | prepend $paths)
 
 alias code = ^open -b com.microsoft.VSCode
