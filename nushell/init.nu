@@ -217,6 +217,7 @@ alias gob = go build .
 
 alias td = tilt down
 alias tu = tilt up
+alias tc = tilt ci
 
 alias npmp = pnpm
 alias npn = pnpm
