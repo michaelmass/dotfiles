@@ -69,7 +69,7 @@
           "type": "kubectl",
           "style": "powerline",
           "foreground": "#bdc3c7",
-          "template": " \uFD31 {{.Context}}{{if .Namespace}} - {{.Namespace}}{{end}} "
+          "template": " \u2388 {{.Context}}{{if .Namespace}} - {{.Namespace}}{{end}} "
         },
         {
           "foreground": "#27ae60",
