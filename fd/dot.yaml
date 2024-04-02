@@ -1,0 +1,5 @@
+windows:
+  installs: scoop install fd
+
+linux|darwin:
+  installs: brew install fd
