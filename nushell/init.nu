@@ -48,11 +48,12 @@ def gfu [
   let $msg = ([$msg (ternary $skipci " [skip ci]" "")] | str join)
   let $commit = (git commit -m $msg | complete)
 
-  echo $commit.stdout
+  ^echo $commit.stdout
+  ^echo $commit.stderr
 
-  if $commit.stderr? != "" and $commit.stderr? != null {
-    mkerr $commit.stderr
-  }
+  # if $commit.stderr? != "" and $commit.stderr? != null {
+  #   mkerr $commit.stderr
+  # }
 
   if $commit.exit_code == 1 and not ($commit.stdout | str contains "nothing to commit")  {
     mkerr "commit failed"
@@ -186,12 +187,12 @@ def ghprcheck [
   --repo (-r) = ""
 ] {
   let branch = (gh pr view $pr --json headRefName --jq .headRefName $"--repo=($repo)")
-  echo $"Branch is ($branch)"
+  ^echo $"Branch is ($branch)"
   mkerr "Branch was not found" -c ($branch == "")
 
   let directory = ternary ($repo == "") $env.PWD ([$nu.home-path "Documents/dev" $repo] | path join)
 
-  echo $"Directory is ($directory)"
+  ^echo $"Directory is ($directory)"
 
   if ((not ($directory | path exists)) and ($repo != "")) {
     let parts = ($repo | split row "/")
