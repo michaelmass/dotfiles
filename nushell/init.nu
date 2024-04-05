@@ -149,6 +149,11 @@ alias glogjson = git log --pretty=format:'{"commit": "%H", "author": "%an <%ae>"
 alias ghprv = gh pr view --web
 alias ghv = gh repo view --web
 
+def ghbv [] {
+  let branch = (git branch --show-current | str trim)
+  gh repo view $"--branch=($branch)" --web
+}
+
 def ghpropen [
   --draft (-d) = false
   --web (-w) = true
