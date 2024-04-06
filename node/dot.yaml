@@ -3,9 +3,11 @@ windows:
     scoop install fnm
     fnm install 18.20.1
     fnm use 18.20.1
+    fnm default 18.20.1
 
 linux|darwin:
   installs: |
     brew install fnm
     fnm install 18.20.1
     fnm use 18.20.1
+    fnm default 18.20.1
