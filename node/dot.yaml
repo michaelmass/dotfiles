@@ -1,13 +1,11 @@
 windows:
   installs: |
-    scoop install nvm
-    # nvm install 18.19.0
-    # sudo nvm use 18.19.0
-  depends:
-    - sudo
+    scoop install fnm
+    fnm install 18.20.1
+    fnm use 18.20.1
 
 linux|darwin:
   installs: |
-    # brew install nvm
-    # nvm install 18.19.0
-    # nvm use 18.19.0
+    brew install fnm
+    fnm install 18.20.1
+    fnm use 18.20.1
