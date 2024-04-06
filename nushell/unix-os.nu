@@ -1,18 +1,19 @@
 $env.PNPM_HOME = $"($env.HOME)/Library/pnpm"
-
 $env.ANDROID_HOME = $"($env.HOME)/Library/Android/sdk"
+
+load-env (fnm env --shell bash | lines | str replace 'export ' '' | str replace -a '"' '' | split column = | rename name value | where name != "FNM_ARCH" and name != "PATH" | reduce -f {} {|it, acc| $acc | upsert $it.name $it.value })
 
 let $paths = [
   $env.PNPM_HOME,
   "/opt/homebrew/bin",
   "/opt/homebrew/sbin",
   "/opt/homebrew/opt/openjdk/bin",
-  "~/.nvm/versions/node/v18.12.1/bin",
   "~/.cargo/bin",
-  "~/.knode/bin",
   "~/.kit/bin",
   "~/.deno/bin",
+  "~/.fnm",
   "/usr/local/bin",
+  $"($env.FNM_MULTISHELL_PATH)/bin",
 ]
 
 $env.PATH = ($env.PATH | prepend $paths)
