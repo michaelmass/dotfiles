@@ -300,6 +300,12 @@ def gfumerge [
   gclean
 }
 
+def lhf [] {
+  gaa
+  lefthook run format
+  gaa
+}
+
 def new [
   filename
 ] {
