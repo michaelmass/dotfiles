@@ -48,8 +48,8 @@ def gfu [
   let $msg = ([$msg (ternary $skipci " [skip ci]" "")] | str join)
   let $commit = (git commit -m $msg | complete)
 
-  ^echo $commit.stdout
-  ^echo $commit.stderr
+  print $commit.stdout
+  print $commit.stderr
 
   # if $commit.stderr? != "" and $commit.stderr? != null {
   #   mkerr $commit.stderr
@@ -154,7 +154,7 @@ def ghbv [] {
   gh repo view $"--branch=($branch)" --web
 }
 
-def ghpropen [
+def ghprcreate [
   --draft (-d) = false
   --web (-w) = true
 ] {
@@ -187,21 +187,85 @@ def ghprmerge [
   gh pr merge $pr --squash $"--repo=($repo)"
 }
 
+def parse_pr [
+  pr
+  --org (-o) = ""
+  --repo (-r) = ""
+] {
+  mut repo_name = $repo
+  mut org_name = $org
+  mut pr_number = $pr
+
+  if ($pr | into string | str starts-with 'https://') {
+    let parts = ($pr | str replace -r '^https://' '' | str replace -r '^github.com' '' | str trim -c '/' | split row '/')
+
+    $org_name = ($parts | first)
+    $repo_name = ($parts | get 1)
+    $pr_number = ($parts | get 3)
+  }
+
+  if ($repo_name == "") {
+    let parts = ($env.PWD | split row "/")
+
+    $repo_name = ($parts | last)
+    $org_name = ($parts | reverse | get 1)
+
+    if ($repo_name == ".dotfiles") {
+      $org_name = "michaelmass"
+    }
+
+    if ($repo_name == ".kenv") {
+      $org_name = "michaelmass"
+    }
+  }
+
+  # Ensure PR is a number
+  $pr_number | into int
+
+  return {
+    org: $org_name,
+    repo: $repo_name,
+    pr: ($pr_number | into string)
+  }
+}
+
+def getprojectdir [
+  --org (-o) = ""
+  --repo (-r) = ""
+] {
+  if ($repo == ".dotfiles") {
+    return "~/.dotfiles"
+  }
+
+  if ($repo == ".kenv") {
+    return "~/.kenv"
+  }
+
+  if ($repo == "test") {
+    return "~/Documents/dev/test"
+  }
+
+  return ([$nu.home-path "Documents/dev" $org $repo] | path join)
+}
+
 def ghprcheck [
   pr
   --repo (-r) = ""
+  --org (-o) = ""
 ] {
-  let branch = (gh pr view $pr --json headRefName --jq .headRefName $"--repo=($repo)")
-  ^echo $"Branch is ($branch)"
+  let info = (parse_pr --org=($org) --repo=($repo) $pr)
+  print $"Checkout PR ($info.pr) in ($info.org)/($info.repo)"
+
+  let branch = (gh pr view $info.pr --json headRefName --jq .headRefName $"--repo=($info.org)/($info.repo)")
+  print $"Branch is ($branch)"
   mkerr "Branch was not found" -c ($branch == "")
 
-  let directory = ternary ($repo == "") $env.PWD ([$nu.home-path "Documents/dev" $repo] | path join)
+  let directory = (getprojectdir --org=($info.org) --repo=($info.repo))
 
-  ^echo $"Directory is ($directory)"
+  print $"Directory is ($directory)"
 
-  if ((not ($directory | path exists)) and ($repo != "")) {
-    let parts = ($repo | split row "/")
-    ghrepoclone --org=($parts | first) --open=false ($parts | last)
+  if (not ($directory | path exists)) {
+    ghrepoclone --org=($info.org) --open=false $info.repo
   }
 
   mkerr "Directory does not exist" -c (not ($directory | path exists))
