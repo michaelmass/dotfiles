@@ -378,6 +378,6 @@ def new [
   code $filename
 }
 
-alias stodo = deno run --allow-run=rg jsr:@michaelmass/stodo/cli
+alias stodo = deno run --allow-run=rg jsr:@michaelmass/stodo/cli search
 
 clear
