@@ -370,6 +370,12 @@ def lhf [] {
   gaa
 }
 
+def lhc [] {
+  gaa
+  lefthook run pre-commit
+  gaa
+}
+
 def new [
   filename
 ] {
@@ -379,5 +385,6 @@ def new [
 }
 
 alias stodo = deno run --allow-run=rg,git,jq jsr:@michaelmass/stodo/cli search
+alias stodoh = deno run --allow-run=rg,git,jq jsr:@michaelmass/stodo/cli search -e --format pretty --jq "[.[] | select(.priority.value >= 8)]"
 
 clear
