@@ -1,5 +1,9 @@
 windows:
-  installs: scoop install gh
+  installs: |
+    scoop install gh
+    gh extension install github/gh-copilot
 
 linux|darwin:
-  installs: brew install gh
+  installs: |
+    brew install gh
+    gh extension install github/gh-copilot
