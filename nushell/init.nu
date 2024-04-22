@@ -297,6 +297,8 @@ alias pnp = pnpm
 alias ppnm = pnpm
 alias pnpmlg = pnpm list -g
 
+alias ez = eza --color=always --long --icons=always --no-filesize --no-time --no-permissions --no-user
+
 alias cat = bat
 
 alias dr = dagger run deno run -A
