@@ -73,6 +73,10 @@ def gfu [
   }
 }
 
+def gb [] {
+  return (git branch --show-current | str trim)
+}
+
 def grmb [] {
 	git branch | lines | where ($it != "* master" and $it != "* main") | each {|br| git branch -D ($br | str trim) } | str trim
   git remote prune origin
@@ -80,13 +84,13 @@ def grmb [] {
 
 def grhard [] {
   git add --all
-  let $branch = (git branch --show-current | str trim)
+  let $branch = gb
   print $"Resetting git to origin/($branch)"
   git reset --hard $"origin/($branch)"
 }
 
 def grhead [] {
-  let $branch = (git branch --show-current | str trim)
+  let $branch = gb
   print $"Resetting git to origin/($branch)"
   git reset $"origin/($branch)"
 }
@@ -147,12 +151,14 @@ alias gsd = git stash drop
 alias gsp = git stash pop
 alias glogjson = git log --pretty=format:'{"commit": "%H", "author": "%an <%ae>", "date": "%ad", "message": "%f"},' --date=iso
 
+alias cc = pbcopy
+alias pp = pbpaste
+
 alias ghprv = gh pr view --web
 alias ghv = gh repo view --web
 
 def ghbv [] {
-  let branch = (git branch --show-current | str trim)
-  gh repo view $"--branch=($branch)" --web
+  gh repo view $"--branch=(gb)" --web
 }
 
 def ghprcreate [
