@@ -1,4 +1,4 @@
-# TODO add extensions.json, global.code-snippets, settings.json
+# TODO add extensions.json, global.code-snippets, settings.json, keybindings.json
 
 windows:
   installs: scoop install vscode
