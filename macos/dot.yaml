@@ -1,0 +1,4 @@
+darwin:
+  installs: |
+    # Disable the sound effects on power connect
+    defaults write com.apple.PowerChime ChimeOnNoHardware -bool true;killall PowerChime
