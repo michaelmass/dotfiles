@@ -9,4 +9,4 @@ windows:
 linux|darwin:
   installs: brew install alacritty
   links:
-    unix-alacritty.toml: ~/.alacritty.toml
+    unix-alacritty-{{ whoami.arch }}.toml: ~/.alacritty.toml

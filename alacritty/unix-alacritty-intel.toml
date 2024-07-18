@@ -1,0 +1,27 @@
+[font.normal]
+family = "FiraCode Nerd Font Mono"
+
+[shell]
+program = "/usr/local/bin/nu"
+
+[window]
+opacity = 0.9
+startup_mode = "Maximized"
+decorations = "none"
+
+[window.padding]
+x = 0
+y = 0
+
+[scrolling]
+history = 100000
+
+[[keyboard.bindings]]
+action = "Paste"
+key = "V"
+mods = "Control"
+
+[[keyboard.bindings]]
+action = "Copy"
+key = "C"
+mods = "Control"
