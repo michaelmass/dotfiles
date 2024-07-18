@@ -13,5 +13,7 @@ git pull
 brew install fnm
 eval "$(fnm env --use-on-cd)"
 
+source ./bash/.zshrc
+
 rotz link -f
 rotz install
