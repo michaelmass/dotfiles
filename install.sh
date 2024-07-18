@@ -10,5 +10,8 @@ fi
 cd .dotfiles
 git pull
 
+brew install fnm
+eval "$(fnm env --use-on-cd)"
+
 rotz link -f
 rotz install
