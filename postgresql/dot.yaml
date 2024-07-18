@@ -1,0 +1,7 @@
+windows:
+  installs: |
+    scoop install postgresql
+
+linux|darwin:
+  installs: |
+    brew install postgresql
