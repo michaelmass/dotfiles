@@ -1,4 +1,4 @@
-# TODO add extensions.json, global.code-snippets, settings.json, keybindings.json
+# TODO add settings.json, keybindings.json
 
 windows:
   installs: scoop install vscode
@@ -8,4 +8,3 @@ linux|darwin:
   links:
     settings.json: '~/Library/Application Support/Code/User/settings.json'
     keybindings.json: '~/Library/Application Support/Code/User/keybindings.json'
-    extensions.json: '~/.vscode/extensions/extensions.json'
