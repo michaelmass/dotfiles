@@ -1,3 +1,7 @@
 windows:
   installs: |
     scoop install extras/notion
+
+linux|darwin:
+  installs: |
+    brew install --cask notion
