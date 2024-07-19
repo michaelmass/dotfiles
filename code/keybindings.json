@@ -163,17 +163,17 @@
   },
   {
     "key": "cmd+1",
-    "command": "workbench.explorer.fileView.focus",
+    "command": "workbench.explorer.fileView.focus"
   },
   {
     "key": "cmd+1",
     "command": "workbench.files.action.showActiveFileInExplorer",
-    "when": "!sideBarFocus && editorTextFocus",
+    "when": "!sideBarFocus && editorTextFocus"
   },
   {
     "key": "cmd+1",
     "command": "workbench.explorer.fileView.focus",
-    "when": "sideBarFocus && !filesExplorerFocus",
+    "when": "sideBarFocus && !filesExplorerFocus"
   },
   {
     "key": "cmd+1",
@@ -184,21 +184,21 @@
         "workbench.action.focusActiveEditorGroup",
         "workbench.action.toggleSidebarVisibility"
       ]
-    },
+    }
   },
   {
     "key": "f2",
     "when": "sideBarFocus",
-    "command": "renameFile",
+    "command": "renameFile"
   },
   {
     "key": "f3",
     "when": "sideBarFocus",
-    "command": "openInIntegratedTerminal",
+    "command": "openInIntegratedTerminal"
   },
   {
     "key": "f6",
-    "command": "editor.action.openLink",
+    "command": "editor.action.openLink"
   },
   {
     "key": "f6",
@@ -245,5 +245,5 @@
   {
     "key": "alt+6",
     "command": "workbench.action.openEditorAtIndex6"
-  },
+  }
 ]

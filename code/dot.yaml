@@ -5,3 +5,7 @@ windows:
 
 linux|darwin:
   installs: brew install --cask visual-studio-code
+  links:
+    settings.json: '~/Library/Application Support/Code/User/settings.json'
+    keybindings.json: '~/Library/Application Support/Code/User/keybindings.json'
+    extensions.json: '~/.vscode/extensions/extensions.json'
