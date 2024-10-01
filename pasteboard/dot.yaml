@@ -1,2 +1,5 @@
 windows:
   installs: scoop install pasteboard
+
+linux|darwin:
+  installs: false

@@ -4,3 +4,6 @@ darwin:
     # May need to run the following command to take effect
     # killall PowerChime
     defaults write com.apple.PowerChime ChimeOnNoHardware -bool true
+
+windows:
+  installs: false

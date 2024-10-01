@@ -1,5 +1,3 @@
-# TODO add settings.json, keybindings.json
-
 windows:
   installs: scoop install vscode
 
