@@ -1,2 +1,5 @@
 linux|darwin:
   installs: brew install --cask hiddenbar
+
+windows:
+  installs: false

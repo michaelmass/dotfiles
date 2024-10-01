@@ -1,3 +1,6 @@
 windows:
   installs: |
     scoop install vcredist2022
+
+linux|darwin:
+  installs: false

@@ -1,5 +1,5 @@
 windows:
   installs: false
 
-linux|darwin:
-  installs: brew install blueutil
+darwin:
+  installs: brew list blueutil &>/dev/null || brew install blueutil

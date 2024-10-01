@@ -1,2 +1,5 @@
 linux|darwin:
   installs: brew install grishka/grishka/neardrop
+
+windows:
+  installs: false

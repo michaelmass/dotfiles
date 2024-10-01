@@ -1,6 +1,5 @@
 windows:
-  installs: |
-    scoop install alacritty
+  installs: scoop install alacritty
   depends:
     - vcredist2022
   links:

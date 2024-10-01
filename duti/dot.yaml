@@ -6,3 +6,6 @@ darwin:
     duti -s com.microsoft.VSCode public.text all
     duti -s com.microsoft.VSCode public.plain-text all
     duti -s com.microsoft.VSCode public.yaml all
+
+windows:
+  installs: false
