@@ -1,5 +1,5 @@
 linux|darwin:
-  installs: brew install kit
+  installs: false
 
 windows:
   installs: false
