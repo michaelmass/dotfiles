@@ -2,4 +2,4 @@ windows:
   installs: scoop install extras/discord
 
 linux|darwin:
-  installs: brew install --cask discord
+  installs: brew list discord &>/dev/null || brew install --cask discord
