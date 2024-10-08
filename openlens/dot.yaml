@@ -3,5 +3,4 @@ windows:
     scoop install openlens
 
 linux|darwin:
-  installs: |
-    brew install --cask openlens
+  installs: brew list openlens &>/dev/null || brew install --cask openlens

@@ -2,4 +2,4 @@ windows:
   installs: scoop install extras/youtube-music
 
 linux|darwin:
-  installs: brew install --cask yt-music
+  installs: brew list yt-music &>/dev/null || brew install --cask yt-music

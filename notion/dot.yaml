@@ -3,5 +3,4 @@ windows:
     scoop install extras/notion
 
 linux|darwin:
-  installs: |
-    brew install --cask notion
+  installs: brew list notion &>/dev/null || brew install --cask notion

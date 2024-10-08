@@ -1,5 +1,5 @@
 darwin:
-  installs: brew install --cask nordvpn
+  installs: brew list nordvpn &>/dev/null || brew install --cask nordvpn
 
 linux:
   installs: false

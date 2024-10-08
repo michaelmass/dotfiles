@@ -2,5 +2,4 @@ windows:
   installs: false
 
 linux|darwin:
-  installs: |
-    brew install --cask proxyman
+  installs: brew list proxyman &>/dev/null || brew install --cask proxyman
