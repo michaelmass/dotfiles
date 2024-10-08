@@ -1,6 +1,5 @@
 windows:
-  installs: |
-    scoop install extras/slack
+  installs: scoop install extras/slack
 
 linux|darwin:
   installs: false

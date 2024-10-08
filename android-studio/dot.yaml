@@ -1,5 +1,5 @@
 linux|darwin:
-  installs: brew install --cask android-studio
+  installs: brew list android-studio &>/dev/null || brew install --cask android-studio
 
 windows:
   installs: false
