@@ -1,6 +1,6 @@
 windows:
   installs: |
-    scoop install bun-canary
+    scoop install bun
 
 linux|darwin:
   installs: |
