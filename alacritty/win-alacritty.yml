@@ -1,5 +1,6 @@
-shell:
-  program: C:\Users\micha\scoop\shims\nu.exe
+terminal:
+  shell:
+    program: C:\Users\micha\scoop\shims\nu.exe
 
 font:
   normal:
