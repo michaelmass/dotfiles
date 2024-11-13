@@ -10,6 +10,30 @@ const defaultBrowser = {
   profile: personalProfile,
 };
 
+const workBrowser = {
+  name: "Google Chrome",
+  profile: workProfile,
+};
+
+const workUrls = [
+  "botpress.productboard.com",
+  "botpress.grafana.net",
+  "botpress-rm.sentry.io",
+  "botpresshq.slack.com",
+];
+
+const workUrl = ({ url }) => {
+  if (workUrls.includes(url.host)) {
+    return true;
+  }
+
+  if (url.host === "linear.app" && url.pathname.startsWith("/botpress")) {
+    return true;
+  }
+
+  return false;
+};
+
 module.exports = {
   defaultBrowser,
   options: {
@@ -23,10 +47,11 @@ module.exports = {
     },
     {
       match: ({ url }) => url.username === "botpress",
-      browser: {
-        name: "Google Chrome",
-        profile: workProfile,
-      },
+      browser: workBrowser,
+    },
+    {
+      match: workUrl,
+      browser: workBrowser,
     },
   ],
 };
