@@ -20,6 +20,8 @@ const workUrls = [
   "botpress.grafana.net",
   "botpress-rm.sentry.io",
   "botpresshq.slack.com",
+  "botpress-aws.awsapps.com",
+  "device.sso.us-east-1.amazonaws.com",
 ];
 
 const workUrl = ({ url }) => {
