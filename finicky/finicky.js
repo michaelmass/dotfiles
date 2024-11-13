@@ -25,6 +25,12 @@ const workUrls = [
 ];
 
 const workUrl = ({ url }) => {
+  finicky.log("workUrl " + JSON.stringify(url, null, 2));
+
+  if (url.username === "botpress") {
+    return true;
+  }
+
   if (workUrls.includes(url.host)) {
     return true;
   }
@@ -48,11 +54,7 @@ module.exports = {
       browser: defaultBrowser,
     },
     {
-      match: ({ url }) => url.username === "botpress",
-      browser: workBrowser,
-    },
-    {
-      match: workUrl,
+      match: ({ url }) => workUrl({ url }),
       browser: workBrowser,
     },
   ],
