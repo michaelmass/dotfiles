@@ -25,8 +25,6 @@ const workUrls = [
 ];
 
 const workUrl = ({ url }) => {
-  finicky.log("workUrl " + JSON.stringify(url, null, 2));
-
   if (url.username === "botpress") {
     return true;
   }
