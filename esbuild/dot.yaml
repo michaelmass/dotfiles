@@ -4,4 +4,6 @@ windows:
     - pnpm
 
 linux|darwin:
-  installs: brew install esbuild
+  installs: pnpm i -g esbuild
+  depends:
+    - pnpm
