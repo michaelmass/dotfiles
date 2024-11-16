@@ -236,7 +236,8 @@
   "prisma.showPrismaDataPlatformNotification": false,
   "workbench.activityBar.location": "hidden",
   "github.copilot.editor.enableAutoCompletions": false,
-  "workbench.editor.enablePreview": false
+  "workbench.editor.enablePreview": false,
+  "database-client.autoSync": false
   // "workbench.statusBar.visible": false,
   // "workbench.editor.showTabs": "none",
   // "breadcrumbs.filePath": "off",
