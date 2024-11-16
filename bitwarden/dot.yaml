@@ -1,7 +1,5 @@
 windows:
-  installs: pnpm i -g @bitwarden/cli
-  depends:
-    - pnpm
+  installs: scoop install main/bitwarden-cli
 
 linux|darwin:
   installs: brew install bitwarden-cli
