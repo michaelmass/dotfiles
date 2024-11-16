@@ -2,7 +2,7 @@
 // Ideas https://github.com/johnste/finicky/wiki/Configuration-ideas
 // Configuration https://github.com/johnste/finicky/wiki/Configuration
 
-const personalProfile = "Profile 2";
+const personalProfile = "Default";
 const workProfile = "Profile 3";
 
 const defaultBrowser = {
