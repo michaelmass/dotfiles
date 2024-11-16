@@ -12,7 +12,7 @@
 [branch "main"]
 	pushRemote = no_push
 [credential]
-	helper = store
+	helper = /usr/local/share/gcm-core/git-credential-manager
 [diff]
 	tool = default-difftool
 [difftool "default-difftool"]
