@@ -1,5 +1,7 @@
 linux|darwin:
-  installs: brew install --cask hiddenbar
+  installs: |
+    brew install --cask hiddenbar
+    xattr -dr com.apple.quarantine "/Applications/Hidden Bar.app"
 
 windows:
   installs: false
