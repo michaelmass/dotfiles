@@ -2,4 +2,4 @@ windows:
   installs: scoop install docker
 
 linux|darwin:
-  installs: brew list docker &>/dev/null || brew install docker
+  installs: brew list docker &>/dev/null || brew install --cask docker

@@ -6,6 +6,8 @@ windows:
     win-alacritty.yml: ~/AppData/Roaming/alacritty/alacritty.yml
 
 linux|darwin:
-  installs: brew install alacritty
+  installs: |
+    brew install alacritty
+    xattr -dr com.apple.quarantine "/Applications/Alacritty.app"
   links:
     unix-alacritty-{{ whoami.arch }}.toml: ~/.alacritty.toml
