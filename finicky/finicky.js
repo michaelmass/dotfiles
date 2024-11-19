@@ -22,6 +22,8 @@ const workUrls = [
   "botpresshq.slack.com",
   "botpress-aws.awsapps.com",
   "device.sso.us-east-1.amazonaws.com",
+  "app.botpress.cloud",
+  "app.botpress.dev",
 ];
 
 const workUrl = ({ url }) => {
