@@ -2,6 +2,7 @@ linux|darwin:
   installs: |
     brew install --cask hiddenbar
     xattr -dr com.apple.quarantine "/Applications/Hidden Bar.app"
+    defaults import com.dwarvesv.minimalbar hiddenbar/hiddenbar.plist
 
 windows:
   installs: false
