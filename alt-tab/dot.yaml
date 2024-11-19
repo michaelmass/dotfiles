@@ -1,5 +1,7 @@
 linux|darwin:
-  installs: brew install --cask alt-tab
+  installs: |
+    brew install --cask alt-tab
+    defaults import com.lwouis.alt-tab-macos alt-tab/alt-tab.plist
 
 windows:
   installs: false
