@@ -300,6 +300,7 @@ alias npmp = pnpm
 alias npn = pnpm
 alias p = pnpm
 alias pd = pnpm dlx
+alias dlx = pnpm dlx
 alias pnp = pnpm
 alias ppnm = pnpm
 alias pnpmlg = pnpm list -g
