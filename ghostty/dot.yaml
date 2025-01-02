@@ -1,0 +1,7 @@
+windows:
+  installs: false
+
+linux|darwin:
+  installs: brew install --cask ghostty
+  links:
+    config: ~/.config/ghostty/config
