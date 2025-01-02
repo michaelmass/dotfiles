@@ -216,7 +216,9 @@
   "git.autofetch": true,
   "window.zoomLevel": 1,
   "window.newWindowDimensions": "maximized",
-  "editor.codeActionsOnSave": {},
+  "editor.codeActionsOnSave": {
+    "source.organizeImports.biome": "explicit"
+  },
   "terminal.integrated.enableMultiLinePasteWarning": "never",
 
   "todo-tree.general.exportPath": "${workspaceFolder}/todo-tree-%Y%m%d-%H%M.json",
