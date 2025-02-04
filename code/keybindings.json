@@ -245,5 +245,13 @@
   {
     "key": "alt+6",
     "command": "workbench.action.openEditorAtIndex6"
+  },
+  {
+    "key": "shift+cmd+right",
+    "command": "editor.action.smartSelect.expand"
+  },
+  {
+    "key": "shift+cmd+f",
+    "command": "workbench.action.quickTextSearch"
   }
 ]

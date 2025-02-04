@@ -132,6 +132,7 @@
   "explorer.fileNesting.enabled": true,
   "explorer.fileNesting.expand": false,
   "workbench.editor.empty.hint": "hidden",
+  "workbench.editor.wrapTabs": true,
   "editor.linkedEditing": true,
   "workbench.sideBar.location": "right",
   "workbench.startupEditor": "none",
