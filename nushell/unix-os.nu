@@ -1,8 +1,11 @@
 $env.PNPM_HOME = $"($env.HOME)/Library/pnpm"
 $env.ANDROID_HOME = $"($env.HOME)/Library/Android/sdk"
 
+$env.GOPATH = $"($env.HOME)/go"
+
 let $paths = [
   $env.PNPM_HOME,
+  $"($env.GOPATH)/bin",
   "/opt/homebrew/bin",
   "/opt/homebrew/sbin",
   "/opt/homebrew/opt/openjdk/bin",
