@@ -242,7 +242,8 @@
   "workbench.editor.enablePreview": true,
   "database-client.autoSync": true,
   "exportall.config.semis": false,
-  "supermaven.otherWarning": false
+  "supermaven.otherWarning": false,
+  "search.searchOnType": false
   // "workbench.statusBar.visible": false,
   // "workbench.editor.showTabs": "none",
   // "breadcrumbs.filePath": "off",
