@@ -253,5 +253,13 @@
   {
     "key": "shift+cmd+f",
     "command": "workbench.action.quickTextSearch"
+  },
+  {
+    "key": "shift+cmd+a",
+    "command": "workbench.action.gotoSymbol"
+  },
+  {
+    "key": "cmd+'",
+    "command": "editor.togglequotes"
   }
 ]
