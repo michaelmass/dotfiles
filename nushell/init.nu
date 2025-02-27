@@ -310,6 +310,7 @@ alias ez = eza --color=always --long --icons=always --no-filesize --no-time --no
 alias cat = bat
 
 alias dr = dagger run deno run --no-lock -A
+alias dprune = dagger core engine local-cache prune
 
 alias npmlg = npm list -g --depth 0 # list global packages
 
