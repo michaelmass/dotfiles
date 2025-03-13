@@ -243,7 +243,10 @@
   "database-client.autoSync": true,
   "exportall.config.semis": false,
   "supermaven.otherWarning": false,
-  "search.searchOnType": false
+  "search.searchOnType": false,
+  "workbench.editorAssociations": {
+    "*.svg": "default"
+  }
   // "workbench.statusBar.visible": false,
   // "workbench.editor.showTabs": "none",
   // "breadcrumbs.filePath": "off",
