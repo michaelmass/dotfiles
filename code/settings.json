@@ -240,6 +240,7 @@
   "workbench.activityBar.location": "hidden",
   "github.copilot.editor.enableAutoCompletions": false,
   "workbench.editor.enablePreview": true,
+  "chat.commandCenter.enabled": false,
   "database-client.autoSync": true,
   "exportall.config.semis": false,
   "supermaven.otherWarning": false,
