@@ -24,6 +24,7 @@ const workUrls = [
   "device.sso.us-east-1.amazonaws.com",
   "app.botpress.cloud",
   "app.botpress.dev",
+  "app.krisp.ai",
 ];
 
 const workUrl = ({ url }) => {
