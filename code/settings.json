@@ -247,7 +247,9 @@
   "search.searchOnType": false,
   "workbench.editorAssociations": {
     "*.svg": "default"
-  }
+  },
+  "supermaven.enableSuggestionHighlighting": true,
+  "supermaven.enableFixWithSupermaven": true
   // "workbench.statusBar.visible": false,
   // "workbench.editor.showTabs": "none",
   // "breadcrumbs.filePath": "off",
