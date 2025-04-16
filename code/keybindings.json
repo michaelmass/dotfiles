@@ -264,6 +264,12 @@
   },
   {
     "key": "ctrl+cmd+c",
-    "command": "gitlens.copyRemoteFileUrlWithoutRange"
+    "command": "gitlens.copyRemoteFileUrlWithoutRange",
+    "when": "sideBarFocus"
+  },
+  {
+    "key": "ctrl+cmd+c",
+    "command": "gitlens.copyRemoteFileUrlToClipboard",
+    "when": "editorFocus"
   }
 ]
