@@ -2,4 +2,4 @@ windows:
   installs: scoop install extras/slack
 
 linux|darwin:
-  installs: brew install --cask slack
+  installs: brew list slack &>/dev/null || brew install --cask slack
