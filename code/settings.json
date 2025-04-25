@@ -249,7 +249,10 @@
     "*.svg": "default"
   },
   "supermaven.enableSuggestionHighlighting": true,
-  "supermaven.enableFixWithSupermaven": true
+  "supermaven.enableFixWithSupermaven": true,
+  "gitlens.advanced.messages": {
+    "suppressIntegrationRequestTimedOutWarning": true
+  }
   // "workbench.statusBar.visible": false,
   // "workbench.editor.showTabs": "none",
   // "breadcrumbs.filePath": "off",
