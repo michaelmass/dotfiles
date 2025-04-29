@@ -25,6 +25,7 @@ const workUrls = [
   "app.botpress.cloud",
   "app.botpress.dev",
   "app.krisp.ai",
+  "botpress.bamboohr.com",
 ];
 
 const workUrl = ({ url }) => {
