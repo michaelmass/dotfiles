@@ -77,6 +77,11 @@ def gb [] {
   return (git branch --show-current | str trim)
 }
 
+def gbl [] {
+  let $username = (git config user.name | str trim)
+  return (git for-each-ref --sort=authorname --format "%(authorname) %(refname)" | grep $username | str replace -a $"($username) " "")
+}
+
 def grmb [] {
 	git branch | lines | where ($it != "* master" and $it != "* main") | each {|br| git branch -D ($br | str trim) } | str trim
   git remote prune origin
