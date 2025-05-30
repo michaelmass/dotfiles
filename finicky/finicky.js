@@ -46,7 +46,7 @@ const workUrl = ({ url }) => {
   return false;
 };
 
-module.exports = {
+export default {
   defaultBrowser,
   options: {
     hideIcon: false,
