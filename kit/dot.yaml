@@ -1,5 +1,5 @@
 linux|darwin:
-  installs: false
+  installs: brew install --cask script-kit
 
 windows:
   installs: false
