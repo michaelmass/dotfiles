@@ -2,6 +2,4 @@ windows:
   installs: scoop install dagger
 
 linux|darwin:
-  installs: |
-    cd /usr/local
-    curl -L https://dl.dagger.io/dagger/install.sh | sudo DAGGER_VERSION=0.9.6 sh
+  installs: brew install dagger/tap/dagger
