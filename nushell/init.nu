@@ -3,6 +3,7 @@ source ~/.zoxide.nu
 source ~/os.nu
 
 $env.K8S_NAMESPACE = "default"
+$env.DAGGER_NO_NAG = "1"
 
 def mkerr [
   msg
