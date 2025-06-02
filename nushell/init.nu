@@ -312,6 +312,7 @@ alias dlx = pnpm dlx
 alias pnp = pnpm
 alias ppnm = pnpm
 alias pnpmlg = pnpm list -g
+alias pu = pnpm update --latest
 
 alias ez = eza --color=always --long --icons=always --no-filesize --no-time --no-permissions --no-user
 
