@@ -75,7 +75,7 @@ def gfu [
       gh pr view --web
     }
   } else {
-    gh pr create --fill-first $"--draft=($draft)" --web
+    gh pr create --fill-first $"--draft=($draft)" $"--web=($web)"
   }
 }
 
