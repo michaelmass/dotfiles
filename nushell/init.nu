@@ -37,10 +37,15 @@ def dotenv [
   return $record
 }
 
+def ghaipr [] {
+  let $pr = (kit ai-pr-message | from json)
+  gh pr create --title=$pr.title --body=$pr.body --web
+}
+
 def gfu [
   msg = "update"
   --pr (-p) = false
-  --web (-w) = true
+  --web (-w) = false
   --draft (-d) = false
   --skipci (-s)
 ] {
@@ -51,10 +56,6 @@ def gfu [
 
   print $commit.stdout
   print $commit.stderr
-
-  # if $commit.stderr? != "" and $commit.stderr? != null {
-  #   mkerr $commit.stderr
-  # }
 
   if $commit.exit_code == 1 and not ($commit.stdout | str contains "nothing to commit")  {
     mkerr "commit failed"
@@ -70,7 +71,9 @@ def gfu [
       gh pr view --web
     }
   } else {
-    gh pr create --fill-first $"--draft=($draft)" --web
+    if ($web) {
+      gh pr create --fill-first $"--draft=($draft)" --web
+    }
   }
 }
 
