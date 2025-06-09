@@ -37,10 +37,15 @@ def dotenv [
   return $record
 }
 
+def ghaipr [] {
+  let $pr = (kit ai-pr-message | from json)
+  gh pr create --fill-first --title=$pr.title --body=$pr.body --web
+}
+
 def gfu [
   msg = "update"
   --pr (-p) = false
-  --web (-w) = true
+  --web (-w) = false
   --draft (-d) = false
   --skipci (-s)
 ] {
