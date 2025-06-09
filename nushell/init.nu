@@ -39,7 +39,7 @@ def dotenv [
 
 def ghaipr [] {
   let $pr = (kit ai-pr-message | from json)
-  gh pr create --title=$pr.title --body=$pr.body --web
+  gh pr create $"--title=($pr.title)" $"--body=($pr.body)" --web
 }
 
 def gfu [
