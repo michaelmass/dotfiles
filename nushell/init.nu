@@ -412,5 +412,6 @@ alias stodom = deno run --allow-run=rg,git,jq jsr:@michaelmass/stodo/cli search 
 alias stodoh = deno run --allow-run=rg,git,jq jsr:@michaelmass/stodo/cli search -e --format pretty --jq "[.[] | select(.priority.value >= 8)]"
 
 alias ghf = deno run -A jsr:@michaelmass/ghf/cli
+alias ghfa = deno run -A jsr:@michaelmass/ghf/cli apply
 
 clear
