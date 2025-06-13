@@ -414,4 +414,7 @@ alias stodoh = deno run --allow-run=rg,git,jq jsr:@michaelmass/stodo/cli search 
 alias ghf = deno run -A jsr:@michaelmass/ghf/cli
 alias ghfa = deno run -A jsr:@michaelmass/ghf/cli apply
 
+alias yaak = ^open -a "/Applications/Yaak.app"
+alias yak = yaak
+
 clear
