@@ -28,6 +28,9 @@ const workUrls = [
   "botpress.bamboohr.com",
   "meet.google.com",
   "linear.app/botpress",
+  "google.zoom.us",
+  "sauron.botpress.cloud",
+  "sauron.botpress.dev",
 ];
 
 const workUrl = ({ url }) => {
