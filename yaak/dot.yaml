@@ -1,0 +1,5 @@
+windows:
+  installs: scoop install yaak
+
+linux|darwin:
+  installs: brew install --cask yaak
