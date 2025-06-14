@@ -31,7 +31,16 @@ const workUrls = [
   "google.zoom.us",
   "sauron.botpress.cloud",
   "sauron.botpress.dev",
+  "www.cursor.com",
+  "botpress.retool.com",
 ];
+
+const workOrgUrls = {
+  "vercel.com": "botpress-team",
+  "supabase.com": "zxuehanuqnemevxljlpy",
+  "github.com": "/botpress/",
+  "cloud.digitalocean.com": "e869a5",
+};
 
 const workUrl = ({ url }) => {
   if (url.username === "botpress") {
@@ -40,6 +49,14 @@ const workUrl = ({ url }) => {
 
   if (workUrls.includes(url.host)) {
     return true;
+  }
+
+  if (workOrgUrls[url.host]) {
+    const fullpath = url.pathname + url.hash + url.search;
+
+    if (fullpath.includes(workOrgUrls[url.host])) {
+      return true;
+    }
   }
 
   if (url.host === "linear.app" && url.pathname.startsWith("/botpress")) {
