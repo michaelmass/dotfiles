@@ -33,6 +33,7 @@ const workUrls = [
   "sauron.botpress.dev",
   "www.cursor.com",
   "botpress.retool.com",
+  "cursor.com",
 ];
 
 const workOrgUrls = {
