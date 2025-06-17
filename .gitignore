@@ -1,1 +1,7 @@
 .DS_Store
+.env
+.vscode
+extension_tiltfile
+node_modules
+dist
+.ghf.type.ts
