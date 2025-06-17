@@ -28,6 +28,8 @@ const workUrls = [
   "botpresshq.slack.com",
   "sauron.botpress.cloud",
   "sauron.botpress.dev",
+  "studio.botpress.cloud",
+  "studio.botpress.dev",
   "app.krisp.ai",
   "cursor.com",
   "device.sso.us-east-1.amazonaws.com",
