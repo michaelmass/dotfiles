@@ -25,11 +25,6 @@ dotenv_watch()
 default_settings()
 
 resource(
-  name='lefthook install',
-  cmd="lefthook install"
-)
-
-resource(
   name='rotz install',
   cmd="rotz --dry-run install"
 )
