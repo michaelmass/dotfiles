@@ -37,6 +37,7 @@ const workUrls = [
   "meet.google.com",
   "www.cursor.com",
   "us-east-1.console.aws.amazon.com",
+  "app.floatfinancial.com",
 ];
 
 const workOrgUrls = {
