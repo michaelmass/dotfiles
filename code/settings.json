@@ -252,7 +252,8 @@
   "supermaven.enableFixWithSupermaven": true,
   "gitlens.advanced.messages": {
     "suppressIntegrationRequestTimedOutWarning": true
-  }
+  },
+  "docker.extension.enableComposeLanguageServer": false
   // "workbench.statusBar.visible": false,
   // "workbench.editor.showTabs": "none",
   // "breadcrumbs.filePath": "off",
