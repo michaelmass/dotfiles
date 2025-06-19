@@ -412,6 +412,9 @@ def new [
   code $filename
 }
 
+# Copy files to a new directory
+# Example:
+# fd biome.json | lines | copyFiles $in --to=test
 def copyFiles [
   files
   --to (-t) = "."
