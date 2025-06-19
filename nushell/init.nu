@@ -412,6 +412,17 @@ def new [
   code $filename
 }
 
+def copyFiles [
+  files
+  --to (-t) = "."
+  ] {
+  $files | each { | f |
+    let dir = ($to | path join (dirname $f))
+    mkdir $dir
+    cp $f ($to | path join $f)
+  }
+}
+
 alias stodo = deno run --allow-run=rg,git,jq jsr:@michaelmass/stodo/cli search
 alias stodom = deno run --allow-run=rg,git,jq jsr:@michaelmass/stodo/cli search -e --format pretty --jq "[.[] | select(.priority.value >= 5 and .priority.value < 8)]"
 alias stodoh = deno run --allow-run=rg,git,jq jsr:@michaelmass/stodo/cli search -e --format pretty --jq "[.[] | select(.priority.value >= 8)]"
