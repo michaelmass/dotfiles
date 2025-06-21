@@ -42,6 +42,11 @@ def ghaipr [] {
   gh pr create $"--title=($pr.title)" $"--body=($pr.body)" --web
 }
 
+def aicommit [] {
+  let $pr = (kit ai-pr-message | from json)
+  return $pr.title
+}
+
 def gfu [
   msg = "update"
   --pr (-p) = false
