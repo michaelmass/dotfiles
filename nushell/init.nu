@@ -33,7 +33,7 @@ def dotenv [
 ] {
   let $file = ([$file ".env"] | where ($it | path exists) | first)
   let $lines = (open --raw $file | lines | str trim | compact --empty | where {|it| ($it | str starts-with "#" | not $in)})
-  let $record = ($lines | split column "=" | reduce -f {} {|it, acc| $acc | upsert $it.column1 $it.column2 })
+  let $record = ($lines | split column "=" | reduce -f {} {|it, acc| $acc | upsert ($it.column1 | str trim) ($it.column2 | str trim) })
   return $record
 }
 
