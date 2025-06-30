@@ -271,5 +271,9 @@
     "key": "ctrl+cmd+c",
     "command": "gitlens.copyRemoteFileUrlToClipboard",
     "when": "editorFocus"
+  },
+  {
+    "key": "ctrl+cmd+n",
+    "command": "openEditors.newUntitledFile"
   }
 ]
