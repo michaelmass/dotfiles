@@ -1,279 +1,285 @@
 [
-  {
-    "key": "cmd+n",
-    "command": "explorer.newFile"
-  },
-  {
-    "key": "cmd+m",
-    "command": "explorer.newFolder"
-  },
+	{
+		"key": "cmd+n",
+		"command": "explorer.newFile"
+	},
+	{
+		"key": "cmd+m",
+		"command": "explorer.newFolder"
+	},
 
-  {
-    "key": "cmd+w",
-    "command": "workbench.action.closeActiveEditor"
-  },
-  {
-    "key": "cmd+w",
-    "when": "terminalFocus",
-    "command": "workbench.action.terminal.kill"
-  },
-  {
-    "key": "ctrl+tab",
-    "when": "terminalFocus",
-    "command": "workbench.action.terminal.focusNext"
-  },
-  {
-    "key": "cmd+n",
-    "when": "terminalFocus",
-    "command": "workbench.action.terminal.new"
-  },
-  {
-    "key": "cmd+g",
-    "command": "editor.action.deleteLines",
-    "when": "editorTextFocus && !editorReadonly"
-  },
-  {
-    "key": "cmd+shift+g g",
-    "command": "-workbench.view.scm",
-    "when": "workbench.scm.active && !gitlens:disabled && config.gitlens.keymap == 'chorded'"
-  },
-  {
-    "key": "cmd+alt+p",
-    "command": "-projectManager.listProjects"
-  },
-  {
-    "key": "cmd+alt+p",
-    "command": "projectManager.listProjectsNewWindow"
-  },
-  {
-    "key": "alt+w",
-    "command": "-toggleSearchEditorWholeWord",
-    "when": "inSearchEditor && searchInputBoxFocus"
-  },
-  {
-    "key": "alt+w",
-    "command": "-workbench.action.terminal.toggleFindWholeWord",
-    "when": "terminalFindFocused && terminalHasBeenCreated || terminalFindFocused && terminalProcessSupported || terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported"
-  },
-  {
-    "key": "alt+w",
-    "command": "-toggleFindWholeWord",
-    "when": "editorFocus"
-  },
-  {
-    "key": "alt+w",
-    "command": "-toggleSearchWholeWord",
-    "when": "searchViewletFocus"
-  },
-  {
-    "key": "alt+w",
-    "command": "workbench.action.closeEditorsInGroup"
-  },
-  {
-    "key": "cmd+k w",
-    "command": "-workbench.action.closeEditorsInGroup"
-  },
-  {
-    "key": "cmd+`",
-    "command": "openInTerminal",
-    "when": "sideBarFocus"
-  },
-  {
-    "key": "cmd+j",
-    "command": "-workbench.action.togglePanel"
-  },
-  {
-    "key": "cmd+shift+r",
-    "command": "-extension.vsKubernetesDescribe.Refresh",
-    "when": "vscodeKubernetesDescribeContext"
-  },
-  {
-    "key": "cmd+shift+r",
-    "command": "-editor.action.refactor",
-    "when": "editorHasCodeActionsProvider && editorTextFocus && !editorReadonly"
-  },
-  {
-    "key": "cmd+shift+r",
-    "command": "-rerunSearchEditorSearch",
-    "when": "inSearchEditor"
-  },
-  {
-    "key": "cmd+shift+r",
-    "command": "-workbench.action.quickOpenNavigatePreviousInRecentFilesPicker",
-    "when": "inQuickOpen && inRecentFilesPicker"
-  },
-  {
-    "key": "shift+alt+w",
-    "command": "workbench.action.closeOtherEditors"
-  },
-  {
-    "key": "shift+enter",
-    "command": "extension.jumpy-word",
-    "when": "editorTextFocus"
-  },
-  {
-    "key": "Escape",
-    "command": "extension.jumpy-exit",
-    "when": "editorTextFocus && jumpy.isJumpyMode"
-  },
-  {
-    "key": "Enter",
-    "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsFolder && !inputFocus",
-    "command": "runCommands",
-    "args": {
-      "commands": [
-        "filesExplorer.openFilePreserveFocus",
-        "workbench.action.focusActiveEditorGroup",
-        "workbench.action.closeSidebar"
-      ]
-    }
-  },
-  {
-    "key": "enter",
-    "command": "-renameFile"
-  },
-  {
-    "key": "cmd+[",
-    "command": "workbench.files.action.collapseExplorerFolders",
-    "when": "filesExplorerFocus"
-  },
-  {
-    "key": "cmd+2",
-    "command": "workbench.view.search"
-  },
-  {
-    "key": "cmd+3",
-    "command": "workbench.view.scm"
-  },
-  {
-    "key": "cmd+4",
-    "command": "workbench.view.extensions"
-  },
-  {
-    "key": "cmd+5",
-    "command": "workbench.view.extension.todo-tree-container"
-  },
-  {
-    "key": "cmd+6",
-    "command": "liveshare.session.focus"
-  },
-  {
-    "key": "cmd+7",
-    "command": "github.cweijan.mysql.focus"
-  },
-  {
-    "key": "cmd+1",
-    "command": "workbench.explorer.fileView.focus"
-  },
-  {
-    "key": "cmd+1",
-    "command": "workbench.files.action.showActiveFileInExplorer",
-    "when": "!sideBarFocus && editorTextFocus"
-  },
-  {
-    "key": "cmd+1",
-    "command": "workbench.explorer.fileView.focus",
-    "when": "sideBarFocus && !filesExplorerFocus"
-  },
-  {
-    "key": "cmd+1",
-    "when": "sideBarFocus && filesExplorerFocus",
-    "command": "runCommands",
-    "args": {
-      "commands": [
-        "workbench.action.focusActiveEditorGroup",
-        "workbench.action.toggleSidebarVisibility"
-      ]
-    }
-  },
-  {
-    "key": "f2",
-    "when": "sideBarFocus",
-    "command": "renameFile"
-  },
-  {
-    "key": "f3",
-    "when": "sideBarFocus",
-    "command": "openInIntegratedTerminal"
-  },
-  {
-    "key": "f6",
-    "command": "editor.action.openLink"
-  },
-  {
-    "key": "f6",
-    "command": "extension.openInDefaultBrowser",
-    "when": "sideBarFocus"
-  },
-  {
-    "key": "f8",
-    "when": "editorTextFocus",
-    "command": "editor.action.showHover"
-  },
-  {
-    "key": "f10",
-    "command": "workbench.action.navigateBack"
-  },
-  {
-    "key": "f11",
-    "command": "workbench.action.navigateForward"
-  },
-  {
-    "key": "alt+f12",
-    "command": "editor.action.goToTypeDefinition"
-  },
-  {
-    "key": "alt+1",
-    "command": "workbench.action.openEditorAtIndex1"
-  },
-  {
-    "key": "alt+2",
-    "command": "workbench.action.openEditorAtIndex2"
-  },
-  {
-    "key": "alt+3",
-    "command": "workbench.action.openEditorAtIndex3"
-  },
-  {
-    "key": "alt+4",
-    "command": "workbench.action.openEditorAtIndex4"
-  },
-  {
-    "key": "alt+5",
-    "command": "workbench.action.openEditorAtIndex5"
-  },
-  {
-    "key": "alt+6",
-    "command": "workbench.action.openEditorAtIndex6"
-  },
-  {
-    "key": "shift+cmd+right",
-    "command": "editor.action.smartSelect.expand"
-  },
-  {
-    "key": "shift+cmd+f",
-    "command": "workbench.action.quickTextSearch"
-  },
-  {
-    "key": "shift+cmd+a",
-    "command": "workbench.action.gotoSymbol"
-  },
-  {
-    "key": "cmd+'",
-    "command": "editor.togglequotes"
-  },
-  {
-    "key": "ctrl+cmd+c",
-    "command": "gitlens.copyRemoteFileUrlWithoutRange",
-    "when": "sideBarFocus"
-  },
-  {
-    "key": "ctrl+cmd+c",
-    "command": "gitlens.copyRemoteFileUrlToClipboard",
-    "when": "editorFocus"
-  },
-  {
-    "key": "ctrl+cmd+n",
-    "command": "openEditors.newUntitledFile"
-  }
+	{
+		"key": "cmd+w",
+		"command": "workbench.action.closeActiveEditor"
+	},
+	{
+		"key": "cmd+w",
+		"when": "terminalFocus",
+		"command": "workbench.action.terminal.kill"
+	},
+	{
+		"key": "ctrl+tab",
+		"when": "terminalFocus",
+		"command": "workbench.action.terminal.focusNext"
+	},
+	{
+		"key": "cmd+n",
+		"when": "terminalFocus",
+		"command": "workbench.action.terminal.new"
+	},
+	{
+		"key": "cmd+g",
+		"command": "editor.action.deleteLines",
+		"when": "editorTextFocus && !editorReadonly"
+	},
+	{
+		"key": "cmd+shift+g g",
+		"command": "-workbench.view.scm",
+		"when": "workbench.scm.active && !gitlens:disabled && config.gitlens.keymap == 'chorded'"
+	},
+	{
+		"key": "cmd+alt+p",
+		"command": "-projectManager.listProjects"
+	},
+	{
+		"key": "cmd+alt+p",
+		"command": "projectManager.listProjectsNewWindow"
+	},
+	{
+		"key": "alt+w",
+		"command": "-toggleSearchEditorWholeWord",
+		"when": "inSearchEditor && searchInputBoxFocus"
+	},
+	{
+		"key": "alt+w",
+		"command": "-workbench.action.terminal.toggleFindWholeWord",
+		"when": "terminalFindFocused && terminalHasBeenCreated || terminalFindFocused && terminalProcessSupported || terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported"
+	},
+	{
+		"key": "alt+w",
+		"command": "-toggleFindWholeWord",
+		"when": "editorFocus"
+	},
+	{
+		"key": "alt+w",
+		"command": "-toggleSearchWholeWord",
+		"when": "searchViewletFocus"
+	},
+	{
+		"key": "alt+w",
+		"command": "workbench.action.closeEditorsInGroup"
+	},
+	{
+		"key": "cmd+k w",
+		"command": "-workbench.action.closeEditorsInGroup"
+	},
+	{
+		"key": "cmd+`",
+		"command": "openInTerminal",
+		"when": "sideBarFocus"
+	},
+	{
+		"key": "cmd+j",
+		"command": "-workbench.action.togglePanel"
+	},
+	{
+		"key": "cmd+shift+r",
+		"command": "-extension.vsKubernetesDescribe.Refresh",
+		"when": "vscodeKubernetesDescribeContext"
+	},
+	{
+		"key": "cmd+shift+r",
+		"command": "-editor.action.refactor",
+		"when": "editorHasCodeActionsProvider && editorTextFocus && !editorReadonly"
+	},
+	{
+		"key": "cmd+shift+r",
+		"command": "-rerunSearchEditorSearch",
+		"when": "inSearchEditor"
+	},
+	{
+		"key": "cmd+shift+r",
+		"command": "-workbench.action.quickOpenNavigatePreviousInRecentFilesPicker",
+		"when": "inQuickOpen && inRecentFilesPicker"
+	},
+	{
+		"key": "shift+alt+w",
+		"command": "workbench.action.closeOtherEditors"
+	},
+	{
+		"key": "shift+enter",
+		"command": "extension.jumpy-word",
+		"when": "editorTextFocus"
+	},
+	{
+		"key": "Escape",
+		"command": "extension.jumpy-exit",
+		"when": "editorTextFocus && jumpy.isJumpyMode"
+	},
+	{
+		"key": "Enter",
+		"when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsFolder && !inputFocus",
+		"command": "runCommands",
+		"args": {
+			"commands": [
+				"filesExplorer.openFilePreserveFocus",
+				"workbench.action.focusActiveEditorGroup",
+				"workbench.action.closeSidebar"
+			]
+		}
+	},
+	{
+		"key": "enter",
+		"command": "-renameFile"
+	},
+	{
+		"key": "cmd+[",
+		"command": "workbench.files.action.collapseExplorerFolders",
+		"when": "filesExplorerFocus"
+	},
+	{
+		"key": "cmd+2",
+		"command": "workbench.view.search"
+	},
+	{
+		"key": "cmd+3",
+		"command": "workbench.view.scm"
+	},
+	{
+		"key": "cmd+4",
+		"command": "workbench.view.extensions"
+	},
+	{
+		"key": "cmd+5",
+		"command": "workbench.view.extension.todo-tree-container"
+	},
+	{
+		"key": "cmd+6",
+		"command": "liveshare.session.focus"
+	},
+	{
+		"key": "cmd+7",
+		"command": "github.cweijan.mysql.focus"
+	},
+	{
+		"key": "cmd+1",
+		"command": "workbench.explorer.fileView.focus"
+	},
+	{
+		"key": "cmd+1",
+		"command": "workbench.files.action.showActiveFileInExplorer",
+		"when": "!sideBarFocus && editorTextFocus"
+	},
+	{
+		"key": "cmd+1",
+		"command": "workbench.explorer.fileView.focus",
+		"when": "sideBarFocus && !filesExplorerFocus"
+	},
+	{
+		"key": "cmd+1",
+		"when": "sideBarFocus && filesExplorerFocus",
+		"command": "runCommands",
+		"args": {
+			"commands": [
+				"workbench.action.focusActiveEditorGroup",
+				"workbench.action.toggleSidebarVisibility"
+			]
+		}
+	},
+	{
+		"key": "f2",
+		"when": "sideBarFocus",
+		"command": "renameFile"
+	},
+	{
+		"key": "f3",
+		"when": "sideBarFocus",
+		"command": "openInIntegratedTerminal"
+	},
+	{
+		"key": "f6",
+		"command": "editor.action.openLink"
+	},
+	{
+		"key": "f6",
+		"command": "extension.openInDefaultBrowser",
+		"when": "sideBarFocus"
+	},
+	{
+		"key": "f8",
+		"when": "editorTextFocus",
+		"command": "editor.action.showHover"
+	},
+	{
+		"key": "f10",
+		"command": "workbench.action.navigateBack"
+	},
+	{
+		"key": "f11",
+		"command": "workbench.action.navigateForward"
+	},
+	{
+		"key": "alt+f12",
+		"command": "editor.action.goToTypeDefinition"
+	},
+	{
+		"key": "alt+1",
+		"command": "workbench.action.openEditorAtIndex1"
+	},
+	{
+		"key": "alt+2",
+		"command": "workbench.action.openEditorAtIndex2"
+	},
+	{
+		"key": "alt+3",
+		"command": "workbench.action.openEditorAtIndex3"
+	},
+	{
+		"key": "alt+4",
+		"command": "workbench.action.openEditorAtIndex4"
+	},
+	{
+		"key": "alt+5",
+		"command": "workbench.action.openEditorAtIndex5"
+	},
+	{
+		"key": "alt+6",
+		"command": "workbench.action.openEditorAtIndex6"
+	},
+	{
+		"key": "shift+cmd+right",
+		"command": "editor.action.smartSelect.expand"
+	},
+	{
+		"key": "shift+cmd+f",
+		"command": "workbench.action.quickTextSearch"
+	},
+	{
+		"key": "shift+cmd+a",
+		"command": "workbench.action.gotoSymbol"
+	},
+	{
+		"key": "cmd+'",
+		"command": "editor.togglequotes",
+		"when": "editorTextFocus"
+	},
+	{
+		"key": "cmd+'",
+		"command": "workbench.action.toggleMaximizedPanel",
+		"when": "terminalFocus"
+	},
+	{
+		"key": "ctrl+cmd+c",
+		"command": "gitlens.copyRemoteFileUrlWithoutRange",
+		"when": "sideBarFocus"
+	},
+	{
+		"key": "ctrl+cmd+c",
+		"command": "gitlens.copyRemoteFileUrlToClipboard",
+		"when": "editorFocus"
+	},
+	{
+		"key": "ctrl+cmd+n",
+		"command": "openEditors.newUntitledFile"
+	}
 ]
