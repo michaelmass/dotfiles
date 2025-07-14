@@ -1,0 +1,5 @@
+windows:
+  installs: cargo install qrrs
+
+linux|darwin:
+  installs: cargo install qrrs
