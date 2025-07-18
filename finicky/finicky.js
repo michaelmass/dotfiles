@@ -27,6 +27,7 @@ const workUrls = [
   "botpress.pagerduty.com",
   "botpress.productboard.com",
   "botpress.retool.com",
+  "botpress.workable.com",
   "botpresshq.slack.com",
   "cursor.com",
   "dashboard.ngrok.com",
