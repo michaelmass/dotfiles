@@ -63,7 +63,7 @@ const workOrgUrls = {
   "huggingface.co": "/botpress-hq/",
   "insights.hotjar.com": "#botpress",
   "linear.app": "/botpress/",
-  "manage.statuspage.io": "dxgcnnf1xq2r",
+  "manage.statuspage.io": ["dxgcnnf1xq2r", "m41pd5jgg5f0"],
   "miro.com": [
     "3458764561695270325",
     "3458764558992614189",
