@@ -133,6 +133,22 @@
     "command": "-renameFile"
   },
   {
+    "key": "alt alt",
+    "command": "workbench.action.toggleMaximizedPanel",
+    "when": "!panelMaximized"
+  },
+  {
+    "key": "alt alt",
+    "when": "panelMaximized",
+    "command": "runCommands",
+    "args": {
+      "commands": [
+        "workbench.action.toggleMaximizedPanel",
+        "workbench.action.terminal.toggleTerminal"
+      ]
+    }
+  },
+  {
     "key": "cmd+[",
     "command": "workbench.files.action.collapseExplorerFolders",
     "when": "filesExplorerFocus"
