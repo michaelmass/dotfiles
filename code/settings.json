@@ -217,15 +217,11 @@
   "git.autofetch": true,
   "window.zoomLevel": 1,
   "window.newWindowDimensions": "maximized",
-  "editor.codeActionsOnSave": {
-    "source.organizeImports.biome": "explicit"
-  },
+  "editor.codeActionsOnSave": {},
   "terminal.integrated.enableMultiLinePasteWarning": "never",
 
   "todo-tree.general.exportPath": "${workspaceFolder}/todo-tree-%Y%m%d-%H%M.json",
   "workbench.editor.showTabs": "multiple",
-  "window.commandCenter": false,
-  "workbench.layoutControl.enabled": false,
   "git.openRepositoryInParentFolders": "always",
 
   /* Github */
@@ -256,6 +252,22 @@
   "docker.extension.enableComposeLanguageServer": false,
   "[xml]": {
     "editor.defaultFormatter": "redhat.vscode-xml"
+  },
+  "window.commandCenter": false,
+  "workbench.layoutControl.enabled": false,
+  "[dockercompose]": {
+    "editor.insertSpaces": true,
+    "editor.tabSize": 2,
+    "editor.autoIndent": "advanced",
+    "editor.quickSuggestions": {
+      "other": true,
+      "comments": false,
+      "strings": true
+    },
+    "editor.defaultFormatter": "redhat.vscode-yaml"
+  },
+  "[github-actions-workflow]": {
+    "editor.defaultFormatter": "redhat.vscode-yaml"
   }
   // "workbench.statusBar.visible": false,
   // "workbench.editor.showTabs": "none",

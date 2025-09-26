@@ -1,0 +1,9 @@
+windows:
+  installs: pnpm i -g @anthropic-ai/claude-code
+  depends:
+    - pnpm
+
+linux|darwin:
+  installs: pnpm i -g @anthropic-ai/claude-code
+  depends:
+    - pnpm

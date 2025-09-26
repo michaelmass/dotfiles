@@ -12,6 +12,7 @@ let $paths = [
   "~/.cargo/bin",
   "~/.kit/bin",
   "~/.deno/bin",
+  "~/.bun/bin",
   "/usr/local/bin",
   "/usr/local/sbin",
   "/usr/local/opt/openjdk/bin",
