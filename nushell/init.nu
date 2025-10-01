@@ -1,7 +1,6 @@
 source ~/.oh-my-posh.nu
 source ~/.zoxide.nu
 source ~/os.nu
-source ~/vfox.nu
 
 $env.K8S_NAMESPACE = "default"
 $env.DAGGER_NO_NAG = "1"
