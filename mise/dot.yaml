@@ -7,6 +7,7 @@ linux|darwin:
     ' | save $nu.env-path --append
     "\nuse ($nu.default-config-dir | path join mise.nu)" | save $nu.config-path --append
     mise settings add idiomatic_version_file_enable_tools node
-
+  depends:
+    - nushell
 windows:
   installs: false
