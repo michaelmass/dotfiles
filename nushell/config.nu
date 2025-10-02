@@ -891,3 +891,4 @@ $env.config = {
 }
 
 source ~/init.nu
+source ~/.mise.nu
