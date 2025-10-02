@@ -1,0 +1,8 @@
+linux|darwin:
+  installs: |
+    brew install mise
+    mise settings add idiomatic_version_file_enable_tools node
+  depends:
+    - nushell
+windows:
+  installs: false

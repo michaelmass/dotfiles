@@ -16,6 +16,8 @@ let $paths = [
   "/usr/local/bin",
   "/usr/local/sbin",
   "/usr/local/opt/openjdk/bin",
+  "~/.local/bin",
+  "~/.local/sbin",
 ]
 
 $env.PATH = ($env.PATH | prepend $paths)
