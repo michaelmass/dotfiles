@@ -158,7 +158,6 @@ alias yt = yarn test
 alias yw = yarn watch
 
 alias gaa = git add --all
-alias gcb = git checkout -b
 alias gcl = git clone
 alias gcm = git checkout master
 alias gco = git commit -am
@@ -361,8 +360,26 @@ def gclean [] {
 def gc [
   branch
 ] {
+  let current_branch = (gb)
+
+  if ($current_branch == $branch) {
+    return
+  }
+
   git checkout $branch
   gp
+}
+
+def gcb [
+  branch
+] {
+  let current_branch = (gb)
+
+  if ($current_branch == $branch) {
+    return
+  }
+
+  git checkout -b $branch
 }
 
 def gcfu [
