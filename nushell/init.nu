@@ -171,8 +171,8 @@ alias gsd = git stash drop
 alias gsp = git stash pop
 alias glogjson = git log --pretty=format:'{"commit": "%H", "author": "%an <%ae>", "date": "%ad", "message": "%f"},' --date=iso
 
-alias cc = pbcopy
-alias pp = pbpaste
+alias copy = pbcopy
+alias paste = pbpaste
 
 alias ghprv = gh pr view --web
 alias ghv = gh repo view --web
@@ -459,5 +459,7 @@ alias qr = qrrs
 
 alias yaak = ^open -a "/Applications/Yaak.app"
 alias yak = yaak
+
+alias cc = claude --dangerously-skip-permissions
 
 clear
