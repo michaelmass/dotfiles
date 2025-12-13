@@ -313,8 +313,8 @@ alias gor = go run .
 alias gob = go build .
 
 alias td = tilt down
-alias tu = tilt up
-alias tc = tilt ci
+alias tu = tilt up --context=none
+alias tc = tilt ci --context=none
 
 alias npmp = pnpm
 alias npn = pnpm
