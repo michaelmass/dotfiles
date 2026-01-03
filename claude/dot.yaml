@@ -2,8 +2,16 @@ windows:
   installs: pnpm i -g @anthropic-ai/claude-code
   depends:
     - pnpm
+  links:
+    commands: ~/.claude/commands
+    hooks: ~/.claude/hooks
+    settings.json: ~/.claude/settings.json
 
 linux|darwin:
   installs: pnpm i -g @anthropic-ai/claude-code
   depends:
     - pnpm
+  links:
+    commands: ~/.claude/commands
+    hooks: ~/.claude/hooks
+    settings.json: ~/.claude/settings.json
