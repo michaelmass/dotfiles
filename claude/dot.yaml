@@ -1,5 +1,8 @@
 windows:
-  installs: pnpm i -g @anthropic-ai/claude-code
+  installs: |
+    pnpm i -g @anthropic-ai/claude-code
+    claude plugin marketplace add kenryu42/cc-marketplace
+    claude plugin install safety-net@cc-marketplace
   depends:
     - pnpm
   links:
@@ -8,7 +11,10 @@ windows:
     settings.json: ~/.claude/settings.json
 
 linux|darwin:
-  installs: pnpm i -g @anthropic-ai/claude-code
+  installs: |
+    pnpm i -g @anthropic-ai/claude-code
+    claude plugin marketplace add kenryu42/cc-marketplace
+    claude plugin install safety-net@cc-marketplace
   depends:
     - pnpm
   links:
