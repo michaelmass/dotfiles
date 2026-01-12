@@ -5,3 +5,5 @@ extension_tiltfile
 node_modules
 dist
 .ghf.type.ts
+.claude.db
+.claude.error

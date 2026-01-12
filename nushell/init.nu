@@ -33,7 +33,7 @@ def dotenv [
 ] {
   let $file = ([$file ".env"] | where ($it | path exists) | first)
   let $lines = (open --raw $file | lines | str trim | compact --empty | where {|it| ($it | str starts-with "#" | not $in)})
-  let $record = ($lines | split column "=" | reduce -f {} {|it, acc| $acc | upsert ($it.column1 | str trim) ($it.column2 | str trim) })
+  let $record = ($lines | split column "=" | reduce -f {} {|it, acc| $acc | upsert ($it.column0 | str trim) ($it.column1 | str trim) })
   return $record
 }
 
@@ -330,7 +330,7 @@ alias ez = eza --color=always --long --icons=always --no-filesize --no-time --no
 
 alias cat = bat
 
-alias dr = dagger run deno run --no-lock --node-modules-dir=false -A
+alias dr = dagger run deno run --no-config --no-lock --node-modules-dir=false -A
 alias dprune = dagger core engine local-cache prune
 
 alias npmlg = npm list -g --depth 0 # list global packages
