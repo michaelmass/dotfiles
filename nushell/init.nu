@@ -468,5 +468,6 @@ alias yaak = ^open -a "/Applications/Yaak.app"
 alias yak = yaak
 
 alias cc = claude --dangerously-skip-permissions
+alias oc = opencode
 
 clear
