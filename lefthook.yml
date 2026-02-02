@@ -1,0 +1,9 @@
+pre-commit:
+  commands:
+    format:
+      run: yamllint */dot.yaml
+
+format:
+  commands:
+    format:
+      run: yamllint */dot.yaml
