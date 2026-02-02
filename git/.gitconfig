@@ -11,6 +11,8 @@
 	pushRemote = no_push
 [branch "main"]
 	pushRemote = no_push
+[credential]
+	helper = /usr/local/share/gcm-core/git-credential-manager
 [diff]
 	tool = default-difftool
 [difftool "default-difftool"]
@@ -19,8 +21,3 @@
 	rebase = false
 [credential "helperselector"]
 	selected = <no helper>
-[credential]
-	helper = 
-	helper = /usr/local/share/gcm-core/git-credential-manager
-[credential "https://dev.azure.com"]
-	useHttpPath = true
