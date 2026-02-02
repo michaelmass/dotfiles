@@ -269,7 +269,8 @@
   "[github-actions-workflow]": {
     "editor.defaultFormatter": "redhat.vscode-yaml"
   },
-  "typescript.experimental.useTsgo": false
+  "typescript.experimental.useTsgo": false,
+  "claudeCode.preferredLocation": "panel"
   // "workbench.statusBar.visible": false,
   // "workbench.editor.showTabs": "none",
   // "breadcrumbs.filePath": "off",

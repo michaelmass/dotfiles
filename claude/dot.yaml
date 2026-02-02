@@ -8,7 +8,6 @@ windows:
   links:
     commands: ~/.claude/commands
     hooks: ~/.claude/hooks
-    skills: ~/.claude/skills
     settings.json: ~/.claude/settings.json
 
 linux|darwin:
@@ -21,5 +20,4 @@ linux|darwin:
   links:
     commands: ~/.claude/commands
     hooks: ~/.claude/hooks
-    skills: ~/.claude/skills
     settings.json: ~/.claude/settings.json
