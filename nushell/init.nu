@@ -420,6 +420,13 @@ def lhf [] {
   gaa
 }
 
+def symlink [
+  from
+  to
+] {
+  ln -sf $from $to
+}
+
 def lhc [] {
   gaa
   lefthook run pre-commit

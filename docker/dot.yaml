@@ -1,5 +1,5 @@
 windows:
-  installs: scoop install docker
+  installs: false
 
 linux|darwin:
-  installs: brew list docker &>/dev/null || brew install --cask docker
+  installs: brew list docker &>/dev/null || brew install --cask docker-desktop
