@@ -1,0 +1,13 @@
+windows:
+  installs: pnpm i -g opencode-ai
+  depends:
+    - pnpm
+  links:
+    opencode.json: ~/.config/opencode/opencode.json
+
+linux|darwin:
+  installs: pnpm i -g opencode-ai
+  depends:
+    - pnpm
+  links:
+    opencode.json: ~/.config/opencode/opencode.json
