@@ -1,5 +1,5 @@
 export-env {
-  
+
   $env.MISE_SHELL = "nu"
   let mise_hook = {
     condition: { "MISE_SHELL" in $env }
@@ -55,4 +55,3 @@ def --env mise_hook [] {
     | parse vars
     | update-env
 }
-
