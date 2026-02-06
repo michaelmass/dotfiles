@@ -122,7 +122,7 @@ def ghreponew [
 ] {
   let repoWithOwner = ([$org, $repo] | path join)
   let target = ([$folder, $repoWithOwner] | where ($it != "") | first)
-  let directory = ([$nu.home-path "Documents/dev" $target] | path join)
+  let directory = ([$nu.home-dir "Documents/dev" $target] | path join)
   gh repo create --add-readme $"--private=($private)" $"($org)/($repo)"
   gh repo clone $"($org)/($repo)" $directory
   code $directory
@@ -136,7 +136,7 @@ def ghrepoclone [
 ] {
   let repoWithOwner = ([$org, $repo] | path join)
   let target = ([$folder, $repoWithOwner] | where ($it != "") | first)
-  let directory = ([$nu.home-path "Documents/dev" $target] | path join)
+  let directory = ([$nu.home-dir "Documents/dev" $target] | path join)
 
   if ($directory | path exists) {
     print $"Directory ($directory) already exists"
@@ -272,7 +272,7 @@ def getprojectdir [
     return "~/Documents/dev/test"
   }
 
-  return ([$nu.home-path "Documents/dev" $org $repo] | path join)
+  return ([$nu.home-dir "Documents/dev" $org $repo] | path join)
 }
 
 def ghprcheck [
@@ -453,6 +453,11 @@ def copyFiles [
     mkdir $dir
     cp $f ($to | path join $f)
   }
+}
+
+def nuResetConfig [] {
+  config env --default | save $nu.env-path -f
+  config nu --default | save $nu.config-path -f
 }
 
 alias denorun = deno run --no-config --no-lock --node-modules-dir=false -A
