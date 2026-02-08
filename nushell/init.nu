@@ -37,10 +37,40 @@ def dotenv [
   return $record
 }
 
-def ghaipr [] {
-  let $pr = (kit ai-pr-message | from json)
-  gh pr create $"--title=($pr.title)" $"--body=($pr.body)" --web
+def edit-string [
+    initial: string = ""
+] {
+  let temp_file = (mktemp -t "nushell-edit.XXXXXX")
+  $initial | save -f $temp_file
+
+  ^code --wait $temp_file
+
+  let result = (open $temp_file)
+  rm $temp_file
+  return $result
 }
+
+def ghaipr [
+  --edit (-e) = false
+  --web (-w) = true
+] {
+  let $pr = (kit ai-pr-message | from json)
+
+  mut $title = $pr.title
+  mut $body = $pr.body
+
+  if ($edit) {
+    $title = (edit-string $pr.title)
+    $body = (edit-string $pr.body)
+
+    print $"PR Title: ($title)"
+    print $"PR Body: ($body)"
+  }
+
+  gh pr create $"--title=($title)" $"--body=($body)" $"--web=($web)"
+}
+
+alias ghaiprq = ghaipr --edit=true --web=false
 
 def aicommit [] {
   let $pr = (kit ai-pr-message | from json)
