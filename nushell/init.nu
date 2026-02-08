@@ -401,7 +401,7 @@ def gc [
 }
 
 def gcb [
-  branch
+  branch = "mm-update"
 ] {
   let current_branch = (gb)
 
