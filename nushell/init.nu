@@ -37,9 +37,33 @@ def dotenv [
   return $record
 }
 
-def ghaipr [] {
+def edit-string [
+    initial: string = ""
+    --editor: string = "code"
+] {
+    let temp_file = (mktemp -t "nushell-edit.XXXXXX")
+    $initial | save -f $temp_file
+
+    match $editor {
+        "zed" => { zed --wait $temp_file }
+        "code" => { ^code --wait $temp_file }
+        _ => { error make {msg: $"Unknown editor: ($editor)"} }
+    }
+
+    let result = (open $temp_file)
+    rm $temp_file
+    $result
+}
+
+def ghaipr [
+  --edit (-e) = false
+] {
   let $pr = (kit ai-pr-message | from json)
-  gh pr create $"--title=($pr.title)" $"--body=($pr.body)" --web
+
+  let $title = (ternary $edit (edit-string $pr.title) $pr.title)
+  let $body = (ternary $edit (edit-string $pr.body) $pr.body)
+
+  gh pr create $"--title=($title)" $"--body=($body)" --web
 }
 
 def aicommit [] {
