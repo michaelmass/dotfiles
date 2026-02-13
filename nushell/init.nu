@@ -37,6 +37,13 @@ def dotenv [
   return $record
 }
 
+def confirm [
+  question: string = "Are you sure?"
+] {
+  let answer = (input $"($question) \(y/n\): ")
+  return ($answer | str downcase | str starts-with "y")
+}
+
 def edit-string [
     initial: string = ""
 ] {
@@ -488,6 +495,26 @@ def copyFiles [
 def nuResetConfig [] {
   config env --default | save $nu.env-path -f
   config nu --default | save $nu.config-path -f
+}
+
+def gq [] {
+  let $branch = (gb)
+
+  if ($branch == "master") {
+    gcb
+  }
+
+  gfu
+  ghaiprq
+
+  let $continue = (confirm)
+
+  if (!$continue) {
+    return
+  }
+
+  ghprmerge
+  gclean
 }
 
 alias denorun = deno run --no-config --no-lock --node-modules-dir=false -A
