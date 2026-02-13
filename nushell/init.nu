@@ -312,6 +312,16 @@ def getprojectdir [
   return ([$nu.home-dir "Documents/dev" $org $repo] | path join)
 }
 
+def ghprinfo [] {
+  let $pr = gh pr view --json number,title,url,state,headRefName,baseRefName,isDraft,reviewDecision,statusCheckRollup | from json
+  return $pr
+}
+
+def ghprexists [] {
+  let $result = (gh pr view | complete)
+  return ($result.exit_code == 0)
+}
+
 def ghprcheck [
   pr
   --repo (-r) = ""
@@ -395,7 +405,7 @@ def gclean [] {
 }
 
 def gc [
-  branch
+  branch = "mm-update"
 ] {
   let current_branch = (gb)
 
@@ -505,7 +515,12 @@ def gq [] {
   }
 
   gfu
-  ghaiprq
+
+  let $prExists = (ghprexists)
+
+  if (not $prExists) {
+    ghaiprq
+  }
 
   let $continue = (confirm)
 
