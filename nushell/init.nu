@@ -509,7 +509,7 @@ def gq [] {
 
   let $continue = (confirm)
 
-  if (!$continue) {
+  if (not $continue) {
     return
   }
 
