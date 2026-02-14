@@ -318,8 +318,8 @@ def ghprinfo [] {
 }
 
 def ghprexists [] {
-  let $result = (gh pr view | complete)
-  return ($result.exit_code == 0)
+  let $result = (gh pr view --json state --jq .state | complete)
+  return ($result.exit_code == 0 and ($result.stdout | str trim) == "OPEN")
 }
 
 def ghprcheck [
