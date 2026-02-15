@@ -60,6 +60,7 @@ def edit-string [
 def ghaipr [
   --edit (-e) = false
   --web (-w) = true
+  --skip-body (-s) = false
 ] {
   let $pr = (kit ai-pr-message | from json)
 
@@ -68,10 +69,13 @@ def ghaipr [
 
   if ($edit) {
     $title = (edit-string $pr.title)
-    $body = (edit-string $pr.body)
 
     print $"PR Title: ($title)"
-    print $"PR Body: ($body)"
+
+    if (not $skip_body) {
+      $body = (edit-string $pr.body)
+      print $"PR Body: ($body)"
+    }
   }
 
   gh pr create $"--title=($title)" $"--body=($body)" $"--web=($web)"
@@ -507,7 +511,9 @@ def nuResetConfig [] {
   config nu --default | save $nu.config-path -f
 }
 
-def gq [] {
+def gq [
+  --skip-body (-s) = true
+] {
   let $branch = (gb)
 
   if ($branch == "master") {
@@ -519,7 +525,7 @@ def gq [] {
   let $prExists = (ghprexists)
 
   if (not $prExists) {
-    ghaiprq
+    ghaipr --edit=true --web=false --skip-body=($skip_body)
   }
 
   let $continue = (confirm)
