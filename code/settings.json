@@ -279,6 +279,9 @@
     "https://json-schema.org/": true,
     "https://opencode.ai": true,
     "https://models.dev": true
+  },
+  "vs-kubernetes": {
+    "vs-kubernetes.crd-code-completion": "disabled"
   }
   // "workbench.statusBar.visible": false,
   // "workbench.editor.showTabs": "none",
