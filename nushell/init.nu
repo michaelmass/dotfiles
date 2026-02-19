@@ -11,9 +11,7 @@ def mkerr [
   --cond (-c) = true
 ] {
   if ($cond) {
-    error make {
-      msg: $msg
-    }
+    error make --unspanned { msg: $msg }
   }
 }
 
@@ -109,7 +107,7 @@ def gfu [
   }
 
   let $push = (git push | complete)
-  mkerr "push failed" -c ($push.exit_code == 1)
+  mkerr $"push failed\n($push.stderr)" -c ($push.exit_code == 1)
 
   if ($pr) {
     gh pr create --fill-first $"--draft=($draft)"
