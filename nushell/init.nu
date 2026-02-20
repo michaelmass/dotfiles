@@ -5,6 +5,7 @@ source ~/os.nu
 $env.K8S_NAMESPACE = "default"
 $env.DAGGER_NO_NAG = "1"
 $env.IS_DEMO = "1"
+$env.HOMEBREW_NO_ENV_HINTS = "1"
 
 def mkerr [
   msg
