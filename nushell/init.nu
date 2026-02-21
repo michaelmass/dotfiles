@@ -187,7 +187,12 @@ def ghrepoclone [
   let directory = ([$nu.home-dir "Documents/dev" $target] | path join)
 
   if ($directory | path exists) {
-    print $"Directory ($directory) already exists"
+    if ([$directory ".git"] | path join | path exists) {
+      print $"Directory ($directory) already exists and is a git repository"
+    } else {
+      print $"Directory ($directory) already exists but is not a git repository"
+      gh repo clone $"($org)/($repo)" $directory
+    }
   } else {
     gh repo clone $"($parsed.org)/($parsed.repo)" $directory
   }
