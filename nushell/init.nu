@@ -175,14 +175,21 @@ def ghrepoclone [
   --folder (-f) = ""
   --open = true
 ] {
-  let repoWithOwner = ([$org, $repo] | path join)
+  let parsed = if ($repo | str contains "/") {
+    let parts = ($repo | split row "/")
+    { org: ($parts | first), repo: ($parts | last) }
+  } else {
+    { org: $org, repo: $repo }
+  }
+
+  let repoWithOwner = ([$parsed.org, $parsed.repo] | path join)
   let target = ([$folder, $repoWithOwner] | where ($it != "") | first)
   let directory = ([$nu.home-dir "Documents/dev" $target] | path join)
 
   if ($directory | path exists) {
     print $"Directory ($directory) already exists"
   } else {
-    gh repo clone $"($org)/($repo)" $directory
+    gh repo clone $"($parsed.org)/($parsed.repo)" $directory
   }
 
   if ($open) {
