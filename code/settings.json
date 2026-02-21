@@ -282,7 +282,8 @@
   },
   "vs-kubernetes": {
     "vs-kubernetes.crd-code-completion": "disabled"
-  }
+  },
+  "extensions.ignoreRecommendations": true
   // "workbench.statusBar.visible": false,
   // "workbench.editor.showTabs": "none",
   // "breadcrumbs.filePath": "off",
