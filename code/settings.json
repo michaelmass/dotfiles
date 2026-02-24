@@ -1,11 +1,11 @@
 {
   "protoc": {
-    "options": ["--proto_path=%LocalAppData%/buf/v1/module/data/buf.build"]
+    "options": ["--proto_path=%LocalAppData%/buf/v1/module/data/buf.build"],
   },
   "workbench.settings.editor": "json",
   "files.exclude": {
     "**/.git": true,
-    "**/node_modules": true
+    "**/node_modules": true,
   },
   "window.title": "${rootName}${separator}${activeEditorShort}",
   "window.titleBarStyle": "custom",
@@ -14,30 +14,30 @@
     "plaintext": true,
     "markdown": true,
     "scminput": false,
-    "yaml": true
+    "yaml": true,
   },
   "editor.stickyScroll.enabled": true,
   "[typescript]": {
-    "editor.defaultFormatter": "biomejs.biome"
+    "editor.defaultFormatter": "biomejs.biome",
   },
   "[javascript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
   },
   "[json]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
   },
   "[typescriptreact]": {
-    "editor.defaultFormatter": "biomejs.biome"
+    "editor.defaultFormatter": "biomejs.biome",
   },
   "[markdown]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "files.trimTrailingWhitespace": false
+    "files.trimTrailingWhitespace": false,
   },
   "[jsonc]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
   },
   "[css]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
   },
   "[yaml]": {
     "editor.insertSpaces": true,
@@ -46,18 +46,18 @@
     "editor.quickSuggestions": {
       "other": true,
       "comments": false,
-      "strings": true
+      "strings": true,
     },
-    "editor.defaultFormatter": "redhat.vscode-yaml"
+    "editor.defaultFormatter": "redhat.vscode-yaml",
   },
   "[rust]": {
-    "editor.tabSize": 4
+    "editor.tabSize": 4,
   },
   "tailwindCSS.experimental.classRegex": [
     ["className:([^,]*)", "(?:'|\"|`)([^']*)(?:'|\"|`)"],
     ["clsx\\(([^)]*)\\)", "(?:'|\"|`)([^']*)(?:'|\"|`)"],
     ["tw\\(([^)]*)\\)", "(?:'|\"|`)([^']*)(?:'|\"|`)"],
-    ["cn\\(([^)]*)\\)", "(?:'|\"|`)([^']*)(?:'|\"|`)"]
+    ["cn\\(([^)]*)\\)", "(?:'|\"|`)([^']*)(?:'|\"|`)"],
   ],
   "javascript.preferences.importModuleSpecifier": "non-relative",
   "typescript.preferences.importModuleSpecifier": "non-relative",
@@ -84,13 +84,13 @@
   "security.workspace.trust.untrustedFiles": "open",
   "terminal.integrated.profiles.windows": {
     "Nushell": {
-      "path": "nu.exe"
-    }
+      "path": "nu.exe",
+    },
   },
   "terminal.integrated.profiles.osx": {
     "Nushell": {
-      "path": "nu"
-    }
+      "path": "nu",
+    },
   },
   "terminal.integrated.defaultProfile.linux": "Nushell",
   "terminal.integrated.defaultProfile.osx": "Nushell",
@@ -106,7 +106,7 @@
   "typescript.tsserver.experimental.enableProjectDiagnostics": false,
   "javascript.updateImportsOnFileMove.enabled": "always",
   "xml.server.binary.trustedHashes": [
-    "a1bf296a5263bc63cca97cb46692d0d523edfe9d2d4e79d5b4d245f57c6c623b"
+    "a1bf296a5263bc63cca97cb46692d0d523edfe9d2d4e79d5b4d245f57c6c623b",
   ],
   "redhat.telemetry.enabled": false,
   "editor.accessibilitySupport": "off",
@@ -115,7 +115,7 @@
   "projectManager.openInNewWindowWhenClickingInStatusBar": true,
   "projectManager.openInCurrentWindowIfEmpty": "never",
   "terminal.integrated.env.windows": {
-    "path": "C:\\Users\\mike\\.console-ninja\\.bin;C:\\Users\\Michael\\.console-ninja\\.bin;${env:PATH}"
+    "path": "C:\\Users\\mike\\.console-ninja\\.bin;C:\\Users\\Michael\\.console-ninja\\.bin;${env:PATH}",
   },
   "diffEditor.maxComputationTime": 0,
   "tiltfile.tilt.path": "/opt/homebrew/bin/tilt",
@@ -211,7 +211,7 @@
     "Tiltfile": ".tiltignore, tilt_config.json*",
     "svelte.config.*": "*.env, .babelrc*, .codecov, .cssnanorc*, .env.*, .envrc, .htmlnanorc*, .lighthouserc.*, .mocha*, .postcssrc*, .terserrc*, api-extractor.json, ava.config.*, babel.config.*, contentlayer.config.*, cssnano.config.*, cypress.*, env.d.ts, formkit.config.*, formulate.config.*, histoire.config.*, houdini.config.*, htmlnanorc.*, i18n.config.*, jasmine.*, jest.config.*, jsconfig.*, karma*, lighthouserc.*, mdsvex.config.js, playwright.config.*, postcss.config.*, puppeteer.config.*, rspack.config.*, svgo.config.*, tailwind.config.*, tsconfig.*, tsdoc.*, uno.config.*, unocss.config.*, vite.config.*, vitest.config.*, vuetify.config.*, webpack.config.*, windi.config.*",
     "vite.config.*": "*.env, .babelrc*, .codecov, .cssnanorc*, .env.*, .envrc, .htmlnanorc*, .lighthouserc.*, .mocha*, .postcssrc*, .terserrc*, api-extractor.json, ava.config.*, babel.config.*, contentlayer.config.*, cssnano.config.*, cypress.*, env.d.ts, formkit.config.*, formulate.config.*, histoire.config.*, htmlnanorc.*, i18n.config.*, jasmine.*, jest.config.*, jsconfig.*, karma*, lighthouserc.*, playwright.config.*, postcss.config.*, puppeteer.config.*, rspack.config.*, svgo.config.*, tailwind.config.*, tsconfig.*, tsdoc.*, uno.config.*, unocss.config.*, vitest.config.*, vuetify.config.*, webpack.config.*, windi.config.*",
-    "vue.config.*": "*.env, .babelrc*, .codecov, .cssnanorc*, .env.*, .envrc, .htmlnanorc*, .lighthouserc.*, .mocha*, .postcssrc*, .terserrc*, api-extractor.json, ava.config.*, babel.config.*, contentlayer.config.*, cssnano.config.*, cypress.*, env.d.ts, formkit.config.*, formulate.config.*, histoire.config.*, htmlnanorc.*, i18n.config.*, jasmine.*, jest.config.*, jsconfig.*, karma*, lighthouserc.*, playwright.config.*, postcss.config.*, puppeteer.config.*, rspack.config.*, svgo.config.*, tailwind.config.*, tsconfig.*, tsdoc.*, uno.config.*, unocss.config.*, vitest.config.*, vuetify.config.*, webpack.config.*, windi.config.*"
+    "vue.config.*": "*.env, .babelrc*, .codecov, .cssnanorc*, .env.*, .envrc, .htmlnanorc*, .lighthouserc.*, .mocha*, .postcssrc*, .terserrc*, api-extractor.json, ava.config.*, babel.config.*, contentlayer.config.*, cssnano.config.*, cypress.*, env.d.ts, formkit.config.*, formulate.config.*, histoire.config.*, htmlnanorc.*, i18n.config.*, jasmine.*, jest.config.*, jsconfig.*, karma*, lighthouserc.*, playwright.config.*, postcss.config.*, puppeteer.config.*, rspack.config.*, svgo.config.*, tailwind.config.*, tsconfig.*, tsdoc.*, uno.config.*, unocss.config.*, vitest.config.*, vuetify.config.*, webpack.config.*, windi.config.*",
   },
   "security.promptForLocalFileProtocolHandling": false,
   "git.autofetch": true,
@@ -242,16 +242,16 @@
   "supermaven.otherWarning": false,
   "search.searchOnType": false,
   "workbench.editorAssociations": {
-    "*.svg": "default"
+    "*.svg": "default",
   },
   "supermaven.enableSuggestionHighlighting": true,
   "supermaven.enableFixWithSupermaven": true,
   "gitlens.advanced.messages": {
-    "suppressIntegrationRequestTimedOutWarning": true
+    "suppressIntegrationRequestTimedOutWarning": true,
   },
   "docker.extension.enableComposeLanguageServer": false,
   "[xml]": {
-    "editor.defaultFormatter": "redhat.vscode-xml"
+    "editor.defaultFormatter": "redhat.vscode-xml",
   },
   "window.commandCenter": false,
   "workbench.layoutControl.enabled": false,
@@ -262,12 +262,12 @@
     "editor.quickSuggestions": {
       "other": true,
       "comments": false,
-      "strings": true
+      "strings": true,
     },
-    "editor.defaultFormatter": "redhat.vscode-yaml"
+    "editor.defaultFormatter": "redhat.vscode-yaml",
   },
   "[github-actions-workflow]": {
-    "editor.defaultFormatter": "redhat.vscode-yaml"
+    "editor.defaultFormatter": "redhat.vscode-yaml",
   },
   "typescript.experimental.useTsgo": false,
   "claudeCode.preferredLocation": "panel",
@@ -278,12 +278,13 @@
     "https://json.schemastore.org/": true,
     "https://json-schema.org/": true,
     "https://opencode.ai": true,
-    "https://models.dev": true
+    "https://models.dev": true,
   },
   "vs-kubernetes": {
-    "vs-kubernetes.crd-code-completion": "disabled"
+    "vs-kubernetes.crd-code-completion": "disabled",
   },
-  "extensions.ignoreRecommendations": true
+  "extensions.ignoreRecommendations": true,
+  "editor.wordWrap": "on",
   // "workbench.statusBar.visible": false,
   // "workbench.editor.showTabs": "none",
   // "breadcrumbs.filePath": "off",
