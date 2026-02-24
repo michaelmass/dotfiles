@@ -3,7 +3,7 @@
 // Configuration https://github.com/johnste/finicky/wiki/Configuration
 
 const personalProfile = "Default";
-const workProfile = "Profile 3";
+const workProfile = "Profile 1";
 
 const defaultBrowser = {
   name: "Google Chrome",
