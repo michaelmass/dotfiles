@@ -42,6 +42,8 @@ const workUrls = [
   "www.cursor.com",
 ];
 
+const peronalUrls = ["github.com"];
+
 const workOrgUrls = {
   "admin.atlassian.com": [
     "907bakbd-da41-19ab-k502-2c857bj2kd6b",
@@ -57,7 +59,6 @@ const workOrgUrls = {
   "dashboard.heroku.com": "/botpress-internal/",
   "depot.dev": "w8z3zskrwb",
   "dnsimple.com": "/78774/",
-  "github.com": "/botpress/",
   "grafana.com": "botpress",
   "groups.google.com": "botpress.com",
   "huggingface.co": "/botpress-hq/",
@@ -116,6 +117,18 @@ const workUrl = ({ url }) => {
   return false;
 };
 
+const personalUrl = ({ url }) => {
+  if (url.username === "personal") {
+    return true;
+  }
+
+  if (peronalUrls.includes(url.host)) {
+    return true;
+  }
+
+  return false;
+};
+
 export default {
   defaultBrowser,
   options: {
@@ -124,7 +137,7 @@ export default {
   },
   handlers: [
     {
-      match: ({ url }) => url.username === "personal",
+      match: ({ url }) => personalUrl({ url }),
       browser: defaultBrowser,
     },
     {
