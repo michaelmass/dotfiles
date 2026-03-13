@@ -407,6 +407,8 @@ alias hls = helm ls --namespace $env.K8S_NAMESPACE
 alias hup = helm upgrade --namespace $env.K8S_NAMESPACE --install --atomic --create-namespace --cleanup-on-fail
 alias hdep = helm dependency build
 
+alias lg = lazygit
+
 def --env kns [
   namespace
 ] {
