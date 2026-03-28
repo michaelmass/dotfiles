@@ -7,7 +7,6 @@ windows:
     - pnpm
   links:
     commands: ~/.claude/commands
-    hooks: ~/.claude/hooks
     settings.json: ~/.claude/settings.json
 
 linux|darwin:
@@ -19,5 +18,4 @@ linux|darwin:
     - pnpm
   links:
     commands: ~/.claude/commands
-    hooks: ~/.claude/hooks
     settings.json: ~/.claude/settings.json
