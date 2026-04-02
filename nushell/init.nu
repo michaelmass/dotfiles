@@ -155,26 +155,7 @@ def gs [] {
   git stash
 }
 
-def ghreponew [
-  repo
-  --org (-o) = "michaelmass"
-  --private (-p) = true
-  --folder (-f) = ""
-] {
-  let repoWithOwner = ([$org, $repo] | path join)
-  let target = ([$folder, $repoWithOwner] | where ($it != "") | first)
-  let directory = ([$nu.home-dir "Documents/dev" $target] | path join)
-  gh repo create --add-readme $"--private=($private)" $"($org)/($repo)"
-  gh repo clone $"($org)/($repo)" $directory
-  code $directory
-}
-
-def ghrepoclone [
-  repo
-  --org (-o) = "michaelmass"
-  --folder (-f) = ""
-  --open = true
-] {
+def ghrepoparse [repo: string, org: string, folder: string] {
   let parsed = if ($repo | str contains "/") {
     let parts = ($repo | split row "/")
     { org: ($parts | first), repo: ($parts | last) }
@@ -186,19 +167,42 @@ def ghrepoclone [
   let target = ([$folder, $repoWithOwner] | where ($it != "") | first)
   let directory = ([$nu.home-dir "Documents/dev" $target] | path join)
 
-  if ($directory | path exists) {
-    if ([$directory ".git"] | path join | path exists) {
-      print $"Directory ($directory) already exists and is a git repository"
+  { org: $parsed.org, repo: $parsed.repo, directory: $directory }
+}
+
+def ghreponew [
+  repo
+  --org (-o) = "michaelmass"
+  --private (-p) = true
+  --folder (-f) = ""
+] {
+  let parsed = (ghrepoparse $repo $org $folder)
+  gh repo create --add-readme $"--private=($private)" $"($parsed.org)/($parsed.repo)"
+  gh repo clone $"($parsed.org)/($parsed.repo)" $parsed.directory
+  code $parsed.directory
+}
+
+def ghrepoclone [
+  repo
+  --org (-o) = "michaelmass"
+  --folder (-f) = ""
+  --open = true
+] {
+  let parsed = (ghrepoparse $repo $org $folder)
+
+  if ($parsed.directory | path exists) {
+    if ([$parsed.directory ".git"] | path join | path exists) {
+      print $"Directory ($parsed.directory) already exists and is a git repository"
     } else {
-      print $"Directory ($directory) already exists but is not a git repository"
-      gh repo clone $"($org)/($repo)" $directory
+      print $"Directory ($parsed.directory) already exists but is not a git repository"
+      gh repo clone $"($parsed.org)/($parsed.repo)" $parsed.directory
     }
   } else {
-    gh repo clone $"($parsed.org)/($parsed.repo)" $directory
+    gh repo clone $"($parsed.org)/($parsed.repo)" $parsed.directory
   }
 
   if ($open) {
-    code $directory
+    code $parsed.directory
   }
 }
 
