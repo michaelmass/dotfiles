@@ -1,13 +1,13 @@
 windows:
   installs:
     cmd: |
-      scoop install pnpm
+      mise use --global pnpm@latest
     depends:
-      - node
+      - mise
 
 linux|darwin:
   installs:
     cmd: |
-      brew install pnpm
+      mise use --global pnpm@latest
     depends:
-      - node
+      - mise

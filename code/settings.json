@@ -283,7 +283,8 @@
     "vs-kubernetes.crd-code-completion": "disabled"
   },
   "extensions.ignoreRecommendations": true,
-  "editor.wordWrap": "on"
+  "editor.wordWrap": "on",
+  "workbench.secondarySideBar.defaultVisibility": "hidden"
   // "workbench.statusBar.visible": false,
   // "workbench.editor.showTabs": "none",
   // "breadcrumbs.filePath": "off",
