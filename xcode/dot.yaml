@@ -1,0 +1,10 @@
+windows:
+  installs: false
+
+linux|darwin:
+  installs:
+    cmd: |
+      if ! xcode-select -p >/dev/null 2>&1; then
+        sudo rm -rf /Library/Developer/CommandLineTools
+        sudo xcode-select --install
+      fi

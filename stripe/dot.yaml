@@ -2,4 +2,7 @@ windows:
   installs: false
 
 linux|darwin:
-  installs: brew install stripe/stripe-cli/stripe
+  installs:
+    cmd: brew install stripe/stripe-cli/stripe
+    depends:
+      - xcode
