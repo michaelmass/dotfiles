@@ -1,9 +1,11 @@
 windows:
-  installs: pnpm i -g @biomejs/biome
-  depends:
-    - pnpm
+  installs:
+    cmd: pnpm i -g @biomejs/biome
+    depends:
+      - pnpm
 
 linux|darwin:
-  installs: pnpm i -g @biomejs/biome
-  depends:
-    - pnpm
+  installs:
+    cmd: pnpm i -g @biomejs/biome
+    depends:
+      - pnpm
