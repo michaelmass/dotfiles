@@ -1,13 +1,7 @@
 windows:
   installs: |
-    scoop install fnm
-    fnm install 18.20.1
-    fnm use 18.20.1
-    fnm default 18.20.1
+    mise use -g node@24
 
 linux|darwin:
   installs: |
-    brew install fnm
-    fnm install 18.20.1
-    fnm use 18.20.1
-    fnm default 18.20.1
+    mise use -g node@24
