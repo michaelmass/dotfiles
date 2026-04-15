@@ -1,7 +1,8 @@
 windows:
-  installs: scoop install alacritty
-  depends:
-    - vcredist2022
+  installs:
+    cmd: scoop install alacritty
+    depends:
+      - vcredist2022
   links:
     win-alacritty.yml: ~/AppData/Roaming/alacritty/alacritty.yml
 

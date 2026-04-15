@@ -1,11 +1,13 @@
 windows:
-  installs: |
-    scoop install pnpm
-  depends:
-    - node
+  installs:
+    cmd: |
+      scoop install pnpm
+    depends:
+      - node
 
 linux|darwin:
-  installs: |
-    brew install pnpm
-  depends:
-    - node
+  installs:
+    cmd: |
+      brew install pnpm
+    depends:
+      - node

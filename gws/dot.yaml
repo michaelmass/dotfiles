@@ -2,6 +2,7 @@ windows:
   installs: false
 
 linux|darwin:
-  installs: pnpm install -g @googleworkspace/cli
-  depends:
-    - pnpm
+  installs:
+    cmd: pnpm install -g @googleworkspace/cli
+    depends:
+      - pnpm
