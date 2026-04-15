@@ -3,3 +3,5 @@ windows:
 
 linux|darwin:
   installs: pnpm install -g @googleworkspace/cli
+  depends:
+    - pnpm
