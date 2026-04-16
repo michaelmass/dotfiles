@@ -297,5 +297,13 @@
   {
     "key": "ctrl+cmd+n",
     "command": "openEditors.newUntitledFile"
-  }
+},
+{
+    "key": "shift+enter",
+    "command": "workbench.action.terminal.sendSequence",
+    "args": {
+        "text": "\u001b\r"
+    },
+    "when": "terminalFocus"
+}
 ]
