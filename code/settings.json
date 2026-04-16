@@ -284,7 +284,8 @@
   },
   "extensions.ignoreRecommendations": true,
   "editor.wordWrap": "on",
-  "workbench.secondarySideBar.defaultVisibility": "hidden"
+  "workbench.secondarySideBar.defaultVisibility": "hidden",
+  "workbench.browser.showInTitleBar": false
   // "workbench.statusBar.visible": false,
   // "workbench.editor.showTabs": "none",
   // "breadcrumbs.filePath": "off",
