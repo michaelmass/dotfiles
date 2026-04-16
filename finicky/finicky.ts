@@ -2,6 +2,8 @@
 // Ideas https://github.com/johnste/finicky/wiki/Configuration-ideas
 // Configuration https://github.com/johnste/finicky/wiki/Configuration
 
+import type { FinickyConfig } from "/Applications/Finicky.app/Contents/Resources/finicky.d.ts";
+
 const personalProfile = "Default";
 const workProfile = "Profile 1";
 
@@ -44,7 +46,7 @@ const workUrls = [
 
 const peronalUrls = ["github.com"];
 
-const workOrgUrls = {
+const workOrgUrls: Record<string, string | string[]> = {
   "admin.atlassian.com": [
     "907bakbd-da41-19ab-k502-2c857bj2kd6b",
     "d58c9551-127c-475c-a274-1b645601c099",
@@ -81,7 +83,7 @@ const workOrgUrls = {
   "healthchecks.io": "016ab399-0bcf-4f0f-a7fe-0ae299edb1d6",
 };
 
-const workUrl = ({ url }) => {
+const workUrl = ({ url }: { url: URL }) => {
   if (url.username === "botpress") {
     return true;
   }
@@ -117,7 +119,7 @@ const workUrl = ({ url }) => {
   return false;
 };
 
-const personalUrl = ({ url }) => {
+const personalUrl = ({ url }: { url: URL }) => {
   if (url.username === "personal") {
     return true;
   }
@@ -132,17 +134,30 @@ const personalUrl = ({ url }) => {
 export default {
   defaultBrowser,
   options: {
-    hideIcon: false,
-    checkForUpdate: false,
+    hideIcon: true,
+    checkForUpdates: true,
+    keepRunning: true,
   },
   handlers: [
     {
-      match: ({ url }) => personalUrl({ url }),
+      match: () => {
+        const modifiers = finicky.getModifierKeys();
+
+        if (modifiers.command) {
+          return true;
+        }
+
+        return false;
+      },
+      browser: workBrowser,
+    },
+    {
+      match: (url) => personalUrl({ url }),
       browser: defaultBrowser,
     },
     {
-      match: ({ url }) => workUrl({ url }),
+      match: (url) => workUrl({ url }),
       browser: workBrowser,
     },
   ],
-};
+} satisfies FinickyConfig;
