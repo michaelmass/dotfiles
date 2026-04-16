@@ -15,7 +15,7 @@
 	YnBsaXN0MDDUAQIDBAUGBwpYJHZlcnNpb25ZJGFyY2hpdmVyVCR0b3BYJG9iamVjdHMS
 	AAGGoF8QD05TS2V5ZWRBcmNoaXZlctEICVRyb290gAGvEBULDBIYHCJQUVJTVFVWV1hZ
 	WltcYWZVJG51bGzSDQ4PEVpOUy5vYmplY3RzViRjbGFzc6EQgAKAFNMTFA4VFhdcdGlt
-	ZXN0YW1wS2V5WWRldmljZUtleYADgAWAE9IZDhobV05TLnRpbWUjQcfIKbsHapSABNId
+	ZXN0YW1wS2V5WWRldmljZUtleYADgAWAE9IZDhobV05TLnRpbWUjQcfINaB/dCWABNId
 	Hh8gWiRjbGFzc25hbWVYJGNsYXNzZXNWTlNEYXRloh8hWE5TT2JqZWN03xAXIyQlJg4n
 	KCkqKywtLi8wMTIzNDU2Nzg5Ojs8PTs8PEFCPDw8PEdISUo8PE1OT1lvc1ZlcnNpb25e
 	dGltZVpvbmVPZmZzZXRYYXBwQnVpbGRfEBVsaXZlVXBkYXRlUGFja2FnZUhhc2haYXBw
@@ -25,8 +25,8 @@
 	VW1vZGVsXxAVd3JhcHBlclJ1bnRpbWVWZXJzaW9uXxAWbGl2ZVVwZGF0ZVJlbGVhc2VM
 	YWJlbFpzY3JlZW5TaXplVm9zTmFtZVdvc0J1aWxkgAuADoAQgACAEoAQgACAAIAGgA2A
 	AIAAgACAAIAJgAeAEYAIgACAAIAPgAqADF8QD2FwcGNlbnRlci5tYWNvc1U0LjMuMFdN
-	YWMxNiw3VUFwcGxlVW1hY09TVjI2LjQuMVYyNUUyNTNVZW5fQ0ET/////////xBZMTky
-	MHgxMDgwVzEwLjEyLjBfEBhjb20ubHdvdWlzLmFsdC10YWItbWFjb3PSHR5dXlpNU0FD
+	YWMxNiw3VUFwcGxlVW1hY09TVjI2LjQuMVYyNUUyNTNVZW5fQ0ET/////////xBZMTcy
+	OHgxMTE3VzEwLjEyLjBfEBhjb20ubHdvdWlzLmFsdC10YWItbWFjb3PSHR5dXlpNU0FD
 	RGV2aWNlo19gIVpNU0FDRGV2aWNlXk1TQUNXcmFwcGVyU2Rr0h0eYmNfEBVNU0FDRGV2
 	aWNlSGlzdG9yeUluZm+jZGUhXxAVTVNBQ0RldmljZUhpc3RvcnlJbmZvXxAPTVNBQ0hp
 	c3RvcnlJbmZv0h0eZ2heTlNNdXRhYmxlQXJyYXmjZ2khV05TQXJyYXkACAARABoAJAAp
@@ -41,7 +41,7 @@
 	YnBsaXN0MDDUAQIDBAUGBwpYJHZlcnNpb25ZJGFyY2hpdmVyVCR0b3BYJG9iamVjdHMS
 	AAGGoF8QD05TS2V5ZWRBcmNoaXZlctEICVRyb290gAGnCwwSGBwiJ1UkbnVsbNINDg8R
 	Wk5TLm9iamVjdHNWJGNsYXNzoRCAAoAG0xMUDhUWF1x0aW1lc3RhbXBLZXlcc2Vzc2lv
-	bklkS2V5gAOAAIAF0hkOGhtXTlMudGltZSNBx8gpuwZ79oAE0h0eHyBaJGNsYXNzbmFt
+	bklkS2V5gAOAAIAF0hkOGhtXTlMudGltZSNBx8g1oHwnIIAE0h0eHyBaJGNsYXNzbmFt
 	ZVgkY2xhc3Nlc1ZOU0RhdGWiHyFYTlNPYmplY3TSHR4jJF8QFk1TQUNTZXNzaW9uSGlz
 	dG9yeUluZm+jJSYhXxAWTVNBQ1Nlc3Npb25IaXN0b3J5SW5mb18QD01TQUNIaXN0b3J5
 	SW5mb9IdHigpXk5TTXV0YWJsZUFycmF5oygqIVdOU0FycmF5AAgAEQAaACQAKQAyADcA
@@ -54,7 +54,7 @@
 	YnBsaXN0MDDUAQIDBAUGBwpYJHZlcnNpb25ZJGFyY2hpdmVyVCR0b3BYJG9iamVjdHMS
 	AAGGoF8QD05TS2V5ZWRBcmNoaXZlctEICVRyb290gAGnCwwSGBwiJ1UkbnVsbNINDg8R
 	Wk5TLm9iamVjdHNWJGNsYXNzoRCAAoAG0xMUDhUWF1x0aW1lc3RhbXBLZXlZdXNlcklk
-	S2V5gAOAAIAF0hkOGhtXTlMudGltZSNBx8gpuwaD9YAE0h0eHyBaJGNsYXNzbmFtZVgk
+	S2V5gAOAAIAF0hkOGhtXTlMudGltZSNBx8g1oHw8Q4AE0h0eHyBaJGNsYXNzbmFtZVgk
 	Y2xhc3Nlc1ZOU0RhdGWiHyFYTlNPYmplY3TSHR4jJF8QFU1TQUNVc2VySWRIaXN0b3J5
 	SW5mb6MlJiFfEBVNU0FDVXNlcklkSGlzdG9yeUluZm9fEA9NU0FDSGlzdG9yeUluZm/S
 	HR4oKV5OU011dGFibGVBcnJheaMoKiFXTlNBcnJheQAIABEAGgAkACkAMgA3AEkATABR
@@ -78,14 +78,14 @@
 	yAAAAAAAAAABwAAA0AAAAAAAAAARwAAAIAAAAAAAAAASwAAA4AAAAAAAAAAB0AAAyAAA
 	AAAAAAAQ0AAABAAAAAAAAAA=
 	</data>
-	<key>NSStatusItem Preferred Position Item-0</key>
-	<real>655</real>
+	<key>NSStatusItem VisibleCC Item-0</key>
+	<false/>
 	<key>NSWindow Frame SUStatusFrame</key>
 	<string>1304 1149 400 135 0 0 3008 1667 </string>
 	<key>NSWindow Frame SUUpdateAlert</key>
 	<string>1194 951 620 398 0 0 3008 1667 </string>
 	<key>NSWindow Frame SettingsWindow</key>
-	<string>2129 313 918 534 1728 37 1920 1050 </string>
+	<string>326 294 918 534 0 0 1728 1084 </string>
 	<key>SUAutomaticallyUpdate</key>
 	<true/>
 	<key>SUEnableAutomaticChecks</key>
@@ -104,6 +104,8 @@
 	<string>0</string>
 	<key>crashPolicy</key>
 	<string>0</string>
+	<key>exceptions</key>
+	<string>[{"bundleIdentifier":"com.McAfee.McAfeeSafariHost","ignore":"0","hide":"1"},{"bundleIdentifier":"com.apple.finder","ignore":"0","hide":"1"},{"bundleIdentifier":"com.microsoft.rdc.macos","ignore":"2","hide":"0"},{"bundleIdentifier":"com.teamviewer.TeamViewer","ignore":"2","hide":"0"},{"bundleIdentifier":"org.virtualbox.app.VirtualBoxVM","ignore":"2","hide":"0"},{"bundleIdentifier":"com.parallels.","ignore":"2","hide":"0"},{"bundleIdentifier":"com.citrix.XenAppViewer","ignore":"2","hide":"0"},{"bundleIdentifier":"com.citrix.receiver.icaviewer.mac","ignore":"2","hide":"0"},{"bundleIdentifier":"com.nicesoftware.dcvviewer","ignore":"2","hide":"0"},{"bundleIdentifier":"com.vmware.fusion","ignore":"2","hide":"0"},{"bundleIdentifier":"com.apple.ScreenSharing","ignore":"2","hide":"0"},{"bundleIdentifier":"com.utmapp.UTM","ignore":"2","hide":"0"},{"bundleIdentifier":"app.scriptkit","ignore":"0","hide":"1"}]</string>
 	<key>hideThumbnails</key>
 	<string>false</string>
 	<key>hideWindowlessApps</key>
@@ -124,6 +126,8 @@
 		<key>string</key>
 		<string>⌘</string>
 	</dict>
+	<key>menubarIconShown</key>
+	<string>false</string>
 	<key>preferencesVersion</key>
 	<string>10.12.0</string>
 	<key>screensToShow</key>
