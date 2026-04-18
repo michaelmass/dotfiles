@@ -385,6 +385,7 @@ alias tc = tilt ci --context=none
 alias npmp = pnpm
 alias npn = pnpm
 alias p = pnpm
+alias pn = pnpm
 alias pd = pnpm dlx
 alias dlx = pnpm dlx
 alias pnp = pnpm
