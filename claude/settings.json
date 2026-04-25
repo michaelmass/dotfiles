@@ -13,6 +13,6 @@
       }
     }
   },
-  "voiceEnabled": true,
-  "skipDangerousModePermissionPrompt": true
+  "skipDangerousModePermissionPrompt": true,
+  "voiceEnabled": true
 }

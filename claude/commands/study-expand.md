@@ -1,0 +1,1 @@
+Read the file called plan.md. This is a study plan for a topic. For every point of this plan, create a new file in the same directory that goes into more detail about the specific point. It should also contain a list of resources to understand the point.
