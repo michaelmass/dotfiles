@@ -2,4 +2,4 @@ windows:
   installs: false
 
 linux|darwin:
-  installs: pnpm i -g @openai/codex
+  installs: brew install codex
