@@ -7,6 +7,10 @@ $env.IS_DEMO = "1"
 $env.CLAUDE_CODE_HIDE_CWD = "1"
 $env.HOMEBREW_NO_ENV_HINTS = "1"
 
+def ghgrep [] {
+  gh pr comment --body "@greptile"
+}
+
 def mkerr [
   msg
   --cond (-c) = true
