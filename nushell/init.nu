@@ -186,6 +186,17 @@ def ghreponew [
   code $parsed.directory
 }
 
+def ghrepolist [
+  --org (-o) = ""
+  --limit (-l) = 100
+] {
+  if ($org == "") {
+    gh repo list $"--limit=($limit)"
+  } else {
+    gh repo list $org $"--limit=($limit)"
+  }
+}
+
 def ghrepoclone [
   repo
   --org (-o) = "michaelmass"
@@ -399,7 +410,6 @@ alias pnpmlg = pnpm list -g
 alias pu = pnpm update --latest
 
 alias ez = eza --color=always --long --icons=always --no-filesize --no-time --no-permissions --no-user
-
 alias cat = bat
 
 alias dr = dagger run deno run --no-config --no-lock --node-modules-dir=false -A
