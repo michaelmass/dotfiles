@@ -501,7 +501,6 @@ def gfumerge [
 def lhf [] {
   gaa
   lefthook run format
-  gaa
 }
 
 def symlink [
@@ -514,7 +513,6 @@ def symlink [
 def lhc [] {
   gaa
   lefthook run pre-commit
-  gaa
 }
 
 def new [
