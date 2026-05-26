@@ -1,0 +1,11 @@
+windows:
+  installs:
+    cmd: pnpm i -g cachebro@latest
+    depends:
+      - pnpm
+
+linux|darwin:
+  installs:
+    cmd: pnpm i -g cachebro@latest
+    depends:
+      - pnpm
