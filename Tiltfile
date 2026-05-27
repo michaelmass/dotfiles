@@ -19,6 +19,7 @@ load(
   'set_mode',
   'string_to_bool',
   'write_file',
+  'service',
 )
 
 dotenv_watch()
