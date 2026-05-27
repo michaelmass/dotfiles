@@ -5,6 +5,7 @@ $env.GOPATH = $"($env.HOME)/go"
 
 let $paths = [
   $env.PNPM_HOME,
+  $"($env.PNPM_HOME)/bin",
   $"($env.GOPATH)/bin",
   "/opt/homebrew/bin",
   "/opt/homebrew/sbin",
