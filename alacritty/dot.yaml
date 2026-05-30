@@ -9,6 +9,6 @@ windows:
 linux|darwin:
   installs: |
     brew install alacritty
-    xattr -dr com.apple.quarantine "/Applications/Alacritty.app"
+    # xattr -dr com.apple.quarantine "/Applications/Alacritty.app"
   links:
     unix-alacritty-{{ whoami.arch }}.toml: ~/.alacritty.toml
