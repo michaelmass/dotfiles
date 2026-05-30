@@ -1,11 +1,11 @@
 windows:
   installs:
-    cmd: pnpm i -g codemogger@latest
+    cmd: pnpm add -g codemogger --config.node-linker=hoisted
     depends:
       - pnpm
 
 linux|darwin:
   installs:
-    cmd: pnpm i -g codemogger@latest
+    cmd: pnpm add -g codemogger --config.node-linker=hoisted
     depends:
       - pnpm
