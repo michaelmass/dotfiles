@@ -409,6 +409,14 @@ alias ppnm = pnpm
 alias pnpmlg = pnpm list -g
 alias pu = pnpm update --latest
 
+alias cmogi = codemogger index .
+
+def cmogs [
+  search = ""
+] {
+  codemogger search $"($search)"
+}
+
 alias ez = eza --color=always --long --icons=always --no-filesize --no-time --no-permissions --no-user
 alias cat = bat
 
