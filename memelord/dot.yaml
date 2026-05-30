@@ -1,11 +1,11 @@
 windows:
   installs:
-    cmd: pnpm i -g memelord@latest
+    cmd: pnpm add -g memelord --config.node-linker=hoisted
     depends:
       - pnpm
 
 linux|darwin:
   installs:
-    cmd: pnpm i -g memelord@latest
+    cmd: pnpm add -g memelord --config.node-linker=hoisted
     depends:
       - pnpm
