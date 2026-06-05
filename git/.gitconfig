@@ -5,6 +5,7 @@
 	editor = code --wait
 	autocrlf = input
 	eol = lf
+	excludesFile = ~/.gitignore
 [push]
 	autoSetupRemote = true
 [branch "master"]
@@ -20,7 +21,7 @@
 [credential "helperselector"]
 	selected = <no helper>
 [credential]
-	helper = 
+	helper =
 	helper = /usr/local/share/gcm-core/git-credential-manager
 [credential "https://dev.azure.com"]
 	useHttpPath = true
