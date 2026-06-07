@@ -1,0 +1,1 @@
+Based on the conversation we had, extract the conventions to follow for this project. If I ask to fix, change, or update something, it means you weren't following the convention. Write the conventions in a file called conventions.md and append to it if it already exists.
