@@ -1,0 +1,1 @@
+Help me create a markdown document to improve performance, fix bugs or reduce the code complexity. The goal is to have a more maintainable code base and a better project without bugs. Create a document called improvements.md with your recommendation.

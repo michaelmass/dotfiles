@@ -1,22 +1,6 @@
 {
   "$schema": "https://json.schemastore.org/claude-code-settings.json",
   "cleanupPeriodDays": 365,
-  "enabledPlugins": {
-    "safety-net@cc-marketplace": true,
-    "frontend-design@claude-plugins-official": true,
-    "superpowers@claude-plugins-official": true,
-    "gopls-lsp@claude-plugins-official": true
-  },
-  "extraKnownMarketplaces": {
-    "cc-marketplace": {
-      "source": {
-        "source": "github",
-        "repo": "kenryu42/cc-marketplace"
-      }
-    }
-  },
-  "skipDangerousModePermissionPrompt": true,
-  "voiceEnabled": true,
   "hooks": {
     "SessionStart": [
       {
@@ -31,14 +15,14 @@
     ],
     "PostToolUse": [
       {
+        "matcher": "*",
         "hooks": [
           {
             "type": "command",
             "command": "memelord hook post-tool-use",
             "timeout": 5
           }
-        ],
-        "matcher": "*"
+        ]
       }
     ],
     "Stop": [
@@ -63,5 +47,22 @@
         ]
       }
     ]
-  }
+  },
+  "enabledPlugins": {
+    "safety-net@cc-marketplace": true,
+    "frontend-design@claude-plugins-official": true,
+    "superpowers@claude-plugins-official": true,
+    "gopls-lsp@claude-plugins-official": true
+  },
+  "extraKnownMarketplaces": {
+    "cc-marketplace": {
+      "source": {
+        "source": "github",
+        "repo": "kenryu42/cc-marketplace"
+      }
+    }
+  },
+  "skipDangerousModePermissionPrompt": true,
+  "voiceEnabled": true,
+  "model": "claude-fable-5[1m]"
 }
