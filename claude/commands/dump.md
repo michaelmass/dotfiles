@@ -1,1 +1,1 @@
-Write you just explained inside a file called `dump.md`
+Write the important part of the conversation inside a markdown file.
