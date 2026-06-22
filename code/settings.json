@@ -1,4 +1,5 @@
 {
+  "workbench.browser.openLocalhostLinks": false,
   "protoc": {
     "options": ["--proto_path=%LocalAppData%/buf/v1/module/data/buf.build"]
   },
