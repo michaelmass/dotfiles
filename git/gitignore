@@ -2,3 +2,4 @@
 .codemogger/
 .memelord/
 .DS_Store
+.playwright-mcp/
