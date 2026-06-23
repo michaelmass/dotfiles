@@ -271,14 +271,18 @@
   "typescript.experimental.useTsgo": false,
   "claudeCode.preferredLocation": "panel",
   "json.schemaDownload.trustedDomains": {
-    "https://schemastore.azurewebsites.net/": true,
-    "https://raw.githubusercontent.com/": true,
-    "https://www.schemastore.org/": true,
-    "https://json.schemastore.org/": true,
+    "https://biomejs.dev": true,
+    "https://developer.microsoft.com/json-schemas/": true,
     "https://json-schema.org/": true,
-    "https://opencode.ai": true,
+    "https://json.schemastore.org/": true,
     "https://models.dev": true,
-    "https://biomejs.dev": true
+    "https://openapi.vercel.sh": true,
+    "https://opencode.ai": true,
+    "https://raw.githubusercontent.com/": true,
+    "https://raw.githubusercontent.com/devcontainers/spec/": true,
+    "https://raw.githubusercontent.com/microsoft/vscode/": true,
+    "https://schemastore.azurewebsites.net/": true,
+    "https://www.schemastore.org/": true
   },
   "vs-kubernetes": {
     "vs-kubernetes.crd-code-completion": "disabled"
