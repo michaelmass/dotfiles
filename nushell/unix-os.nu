@@ -19,6 +19,7 @@ let $paths = [
   "/usr/local/opt/openjdk/bin",
   "~/.local/bin",
   "~/.local/sbin",
+  "~/.kimi-code/bin",
 ]
 
 $env.PATH = ($env.PATH | prepend $paths)
