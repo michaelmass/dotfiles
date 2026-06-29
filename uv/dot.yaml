@@ -1,0 +1,5 @@
+windows:
+  installs: scoop install uv
+
+linux|darwin:
+  installs: brew install uv
