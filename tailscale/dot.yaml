@@ -1,0 +1,8 @@
+darwin:
+  installs: brew list --cask tailscale-app &>/dev/null || brew install --cask tailscale-app; brew list tailscale &>/dev/null || brew install tailscale
+
+linux:
+  installs: false
+
+windows:
+  installs: false
