@@ -1,8 +1,15 @@
 let _omp_executable: string = "oh-my-posh"
 let _omp_config: string = ($nu.home-dir | path join ".omp.config.json")
 
+let _omp_executable_is_path = (
+    ($_omp_executable | str contains "/")
+    or ($_omp_executable | str contains "\\")
+    or ($_omp_executable | str starts-with ".")
+    or ($_omp_executable | str starts-with "~")
+)
+
 # Exit early if the oh-my-posh executable is not available
-if (which $_omp_executable | is-empty) { return }
+if not (($_omp_executable_is_path and ($_omp_executable | path exists)) or (which $_omp_executable | is-not-empty)) { return }
 
 # make sure we have the right prompt render correctly
 if ($env.config? | is-not-empty) {
@@ -25,22 +32,21 @@ def --wrapped _omp_get_prompt [
     type: string,
     ...args: string
 ] {
-    mut execution_time = -1
-    mut no_status = true
     # We have to do this because the initial value of `$env.CMD_DURATION_MS` is always `0823`, which is an official setting.
     # See https://github.com/nushell/nushell/discussions/6402#discussioncomment-3466687.
-    if $env.CMD_DURATION_MS != '0823' {
-        $execution_time = $env.CMD_DURATION_MS
-        $no_status = false
+    let execution_time = match $env.CMD_DURATION_MS {
+        '0823' => -1
+        $ms => { $ms | into int }
     }
 
     (
-        ^$_omp_executable --config=($_omp_config) print $type
+        ^$_omp_executable print $type
             --save-cache
+            --config=($_omp_config)
             --shell=nu
             $"--shell-version=($env.POSH_SHELL_VERSION)"
             $"--status=($env.LAST_EXIT_CODE)"
-            $"--no-status=($no_status)"
+            $"--no-status=($execution_time < 0)"
             $"--execution-time=($execution_time)"
             $"--terminal-width=((term size).columns)"
             $"--job-count=(job list | length)"
@@ -49,7 +55,8 @@ def --wrapped _omp_get_prompt [
 }
 
 $env.PROMPT_MULTILINE_INDICATOR = (
-    ^$_omp_executable --config=($_omp_config) print secondary
+    ^$_omp_executable print secondary
+        --config=($_omp_config)
         --shell=nu
         $"--shell-version=($env.POSH_SHELL_VERSION)"
 )
@@ -57,10 +64,10 @@ $env.PROMPT_MULTILINE_INDICATOR = (
 $env.PROMPT_COMMAND = {||
     # hack to set the cursor line to 1 when the user clears the screen
     # this obviously isn't bulletproof, but it's a start
-    mut clear = false
-    if $nu.history-enabled {
-        $clear = ((history | last 1 | get -o 0.command) == "clear")
-    }
+    let clear = $nu.history-enabled and (
+        (history | is-empty)
+        or (history | last | get command?) == "clear"
+    )
 
     if ($env.SET_POSHCONTEXT? | is-not-empty) {
         do --env $env.SET_POSHCONTEXT
