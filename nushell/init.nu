@@ -45,7 +45,7 @@ def confirm [
   question: string = "Are you sure?"
 ] {
   let answer = (input $"($question) \(y/n\): ")
-  return ($answer | str downcase | str starts-with "y")
+  return ($answer | str lowercase | str starts-with "y")
 }
 
 def edit-string [
