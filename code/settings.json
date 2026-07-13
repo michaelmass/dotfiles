@@ -290,7 +290,15 @@
   "extensions.ignoreRecommendations": true,
   "editor.wordWrap": "on",
   "workbench.secondarySideBar.defaultVisibility": "hidden",
-  "workbench.browser.showInTitleBar": false
+  "workbench.browser.showInTitleBar": false,
+  "yaml.disableSchemaDetection": [
+    "**/.github/workflows/*.yml",
+    "**/.github/workflows/*.yaml",
+    "**/.gitea/workflows/*.yml",
+    "**/.gitea/workflows/*.yaml",
+    "**/.forgejo/workflows/*.yml",
+    "**/.forgejo/workflows/*.yaml"
+  ]
   // "workbench.statusBar.visible": false,
   // "workbench.editor.showTabs": "none",
   // "breadcrumbs.filePath": "off",

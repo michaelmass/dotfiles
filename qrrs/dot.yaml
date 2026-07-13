@@ -1,5 +1,9 @@
 windows:
   installs: cargo install qrrs
+  depends:
+    - rustup
 
 linux|darwin:
   installs: cargo install qrrs
+  depends:
+    - rustup
