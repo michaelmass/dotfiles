@@ -71,7 +71,7 @@
         },
         {
           "style": "powerline",
-          "template": " \u2388 {{.Context}}{{if .Namespace}} - {{.Namespace}}{{end}} ",
+          "template": " \u2388 {{ .Context | splitList \"/\" | last }}{{if .Namespace}} - {{.Namespace}}{{end}} ",
           "foreground": "#bdc3c7",
           "background": "",
           "type": "kubectl"
