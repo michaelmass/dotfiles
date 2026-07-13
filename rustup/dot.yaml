@@ -5,3 +5,4 @@ windows:
 linux|darwin:
   installs: |
     brew install rustup-init
+    brew install rust
