@@ -160,11 +160,17 @@ def gs [] {
 }
 
 def ghrepoparse [repo: string, org: string, folder: string] {
-  let parsed = if ($repo | str contains "/") {
-    let parts = ($repo | split row "/")
-    { org: ($parts | first), repo: ($parts | last) }
+  let normalized = ($repo
+    | str replace -r '^(https?://)?(github\.com[:/])?' ''
+    | str replace -r '^git@github\.com:' ''
+    | str replace -r '\.git$' ''
+    | str trim -c '/')
+
+  let parsed = if ($normalized | str contains "/") {
+    let parts = ($normalized | split row "/")
+    { org: ($parts | first), repo: ($parts | get 1) }
   } else {
-    { org: $org, repo: $repo }
+    { org: $org, repo: $normalized }
   }
 
   let repoWithOwner = ([$parsed.org, $parsed.repo] | path join)
