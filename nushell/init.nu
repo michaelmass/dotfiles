@@ -221,8 +221,6 @@ def ghrepoclone [
   }
 }
 
-alias nvm = fnm
-
 alias y = yarn
 alias yd = yarn dev
 alias ys = yarn start

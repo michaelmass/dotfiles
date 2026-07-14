@@ -1,6 +1,6 @@
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 eval "$(/opt/homebrew/bin/brew shellenv)"
-brew install volllly/tap/rotz
+yes | brew install volllly/tap/rotz
 
 cd ~/
 
@@ -10,9 +10,6 @@ fi
 
 cd .dotfiles
 git pull
-
-brew install fnm
-eval "$(fnm env --use-on-cd)"
 
 source ./bash/.zshrc
 
