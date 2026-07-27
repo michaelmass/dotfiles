@@ -203,13 +203,46 @@ def ghrepolist [
   }
 }
 
+const ghrepo_orgs = ["michaelmass", "botpress"]
+
+def ghrepoexists [org: string, repo: string] {
+  (gh repo view $"($org)/($repo)" | complete | get exit_code) == 0
+}
+
+def ghrepofind [repo: string] {
+  for org in $ghrepo_orgs {
+    if (ghrepoexists $org $repo) {
+      return $org
+    }
+  }
+
+  null
+}
+
 def ghrepoclone [
   repo
-  --org (-o) = "michaelmass"
+  --org (-o) = ""
   --folder (-f) = ""
   --open = true
 ] {
-  let parsed = (ghrepoparse $repo $org $folder)
+  let defaultOrg = ($ghrepo_orgs | first)
+  let initial = (ghrepoparse $repo (if ($org == "") { $defaultOrg } else { $org }) $folder)
+
+  # With no explicit org (via --org or owner/repo), search ghrepo_orgs in order
+  # and use the first that actually has the repo.
+  let parsed = if ($org == "") and (not ($repo | str contains "/")) {
+    let found = (ghrepofind $initial.repo)
+    if ($found == null) {
+      $initial
+    } else {
+      if ($found != $initial.org) {
+        print $"Repository found under ($found)/($initial.repo)"
+      }
+      (ghrepoparse $"($found)/($initial.repo)" $defaultOrg $folder)
+    }
+  } else {
+    $initial
+  }
 
   if ($parsed.directory | path exists) {
     if ([$parsed.directory ".git"] | path join | path exists) {
