@@ -1,63 +1,24 @@
 {
   "$schema": "https://json.schemastore.org/claude-code-settings.json",
   "cleanupPeriodDays": 365,
-  "hooks": {
-    "SessionStart": [
-      {
-        "hooks": [
-          {
-            "type": "command",
-            "command": "memelord hook session-start",
-            "timeout": 10
-          }
-        ]
-      }
-    ],
-    "PostToolUse": [
-      {
-        "matcher": "*",
-        "hooks": [
-          {
-            "type": "command",
-            "command": "memelord hook post-tool-use",
-            "timeout": 5
-          }
-        ]
-      }
-    ],
-    "Stop": [
-      {
-        "hooks": [
-          {
-            "type": "command",
-            "command": "memelord hook stop",
-            "timeout": 15
-          }
-        ]
-      }
-    ],
-    "SessionEnd": [
-      {
-        "hooks": [
-          {
-            "type": "command",
-            "command": "memelord hook session-end",
-            "timeout": 30
-          }
-        ]
-      }
-    ]
-  },
+  "hooks": {},
   "enabledPlugins": {
     "safety-net@cc-marketplace": true,
     "frontend-design@claude-plugins-official": true,
-    "posthog@claude-plugins-official": true
+    "posthog@claude-plugins-official": true,
+    "mobbin@mobbin": true
   },
   "extraKnownMarketplaces": {
     "cc-marketplace": {
       "source": {
         "source": "github",
         "repo": "kenryu42/cc-marketplace"
+      }
+    },
+    "mobbin": {
+      "source": {
+        "source": "github",
+        "repo": "mobbin/skills"
       }
     }
   },
